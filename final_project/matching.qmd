@@ -1,0 +1,253 @@
+---
+title: "Matching"
+format: pdf
+---
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(modelr)
+library(gridExtra)
+library(stargazer)
+final_contests <- read_csv("../data/final_contests.csv")
+final_contests$concurrent <- factor(final_contests$concurrent, levels = 
+                                         c("none", "midterm", "president"))
+final_contests$office <- factor(final_contests$office, levels = c("City Council", "Mayor"))
+final_contests$year <- factor(final_contests$year, levels = seq(2010,2021,1))
+final_contests$state <- factor(final_contests$state, levels = unique(final_contests$state))
+396 - (sum(is.na(final_contests$same_months))+ sum(final_contests$same_months, na.rm=TRUE))
+t.test(turnout~council.manager, data = final_contests)
+```
+
+```{r}
+all_covs <- final_contests[, c("council.manager","turnout", "has_mayor", "mayor_elec", "incumbent", "log.pop", 
+                       "margin", "percent_men", "percent_women", "percent_white",
+                       "percent_black", "percent_hispanic", "percent_asian_american",
+                       "concurrent_pres", "concurrent_mid")]
+cors <- (cor(all_covs))
+
+final_covs <- final_contests[, c("has_mayor", "incumbent", "log.pop", 
+                       "margin", "percent_women","percent_black", 
+                       "percent_hispanic", "percent_asian_american",
+                       "concurrent_pres", "concurrent_mid")]
+
+cors
+```
+
+```{r}
+for (i in seq_along(final_covs)) {
+ x<- ggplot(final_contests, aes(final_covs[[i]], turnout))+
+    geom_point()+theme_minimal()+ labs(x = paste0(names(final_covs[[i]])))+
+    geom_smooth(method = "lm")+
+   geom_smooth()
+  print(x)
+}
+```
+
+```{r}
+table(final_contests$council.manager, final_contests$has_mayor)
+
+predictors <- c("council.manager","concurrent", "has_mayor", "office", "incumbent", "margin", 
+                "year", "state", "percent_women", "percent_black", 
+                "percent_hispanic", "percent_asian_american")
+coef <- list()
+lm_ref <- lm(turnout ~ council.manager, final_contests)
+
+for (i in 1:length(predictors)) {
+  current <- predictors[1:i]
+  formula <- formula(paste0("turnout ~", paste0(current, collapse = "+") ))
+  model <- lm(formula, data = final_contests)
+  tidied <- tidy(model)
+  coef[[i]] <- c(tidied$estimate[tidied$term=="council.manager"],
+                 tidied$p.value[tidied$term=="council.manager"]) 
+  
+}
+coef <- as.tibble(do.call(rbind,coef)) %>% rename(estimate = V1,
+                                                  p.value = V2) %>%
+  mutate(variable_added = predictors,
+         diff_between = estimate - lag(estimate))
+coef
+```
+
+
+```{r}
+
+lm_full <- lm(turnout ~ council.manager + concurrent+ has_mayor+ office+
+                incumbent + margin+percent_women+percent_black+percent_hispanic+
+                percent_asian_american, data = final_contests)
+
+summary(lm_ref)
+summary(lm_full)
+
+
+ggplot(augment(lm_full), aes(.fitted, .resid))+
+  geom_hline(yintercept=0, color = "blue", linetype=2)+geom_point()+theme_minimal()
+
+```
+
+```{r}
+## state and year were not included in the matching because it would just its process of balancing them was just removing certain states, which reduces the sample too much
+#| warning: FALSE
+library(MatchIt)
+library(cobalt)
+set.seed(125)
+bals <- c("incumbent", "percent_women", "percent_black", "percent_hispanic",
+             "percent_asian_american", "log.pop", "concurrent", "distance", "has_mayor")
+formula <- council.manager ~ concurrent+ has_mayor+ office+ log.pop+ incumbent + margin +
+  percent_women+ percent_black+percent_hispanic+ percent_asian_american
+matching_methods <- c("nearest", "optimal", "full", "quick", "genetic")
+distance_methods <- c("glm", "gam", "gbm", "lasso", "ridge", "elasticnet",
+              "rpart", "randomforest", "nnet", "cbps", 
+              "bart", "mahalanobis", "scaled_euclidean", "robust_mahalanobis")
+balances <- list()
+matching <- function(method, formula, data, cutpoints = NULL, grouping = NULL, subclass = NULL, distance, distance.options = NULL) {
+  match <- matchit(formula, method = method, data = data, cutpoints = cutpoints, distance = distance, distance.options = distance.options) 
+  bal <- bal.tab(match, stats = c("mean.diffs", "variance.ratios"), binary = "std", thresholds = c(m=0.1, v=2), un = TRUE)
+  return(bal$Balance)
+}
+nnet <- list(size = 10)
+for(methods in matching_methods) {
+  for(distance in distance_methods) { 
+    cat(methods, distance, sep = "_")
+    if(distance == "nnet") {
+      set.seed(125)
+      balances[[paste(methods, distance, sep = "_")]] <- matching(methods, formula, final_contests, distance = distance, distance.options = nnet)
+    }
+    else {
+    set.seed(125)
+    balances[[paste(methods, distance, sep = "_")]]<- matching(methods, formula, final_contests, distance = distance)
+    }
+  }
+}
+bal_result <- list()
+for(i in seq_along(balances)) {
+  m <- sum(if_else(balances[[i]]["M.Threshold"]=="Balanced, <0.1",1 , 0), na.rm=TRUE)
+  v <- sum(if_else(balances[[i]]["V.Threshold"]=="Balanced, <2", 1 , 0), na.rm=TRUE)
+  bal_result[[i]] <-tibble(method = paste(names(balances[i])), 
+                    bal_mean = m,
+                    bal_var = v)
+
+}
+bal_result <- bind_rows(bal_result)
+my_pick <- bal_result %>% filter(bal_mean==max(bal_mean)) %>%
+  filter(bal_var == max(bal_var)) %>% print()
+
+```
+
+
+```{r}
+balances[["optimal_glm"]]
+balances[["optimal_gam"]]
+tie_breaker <- tibble(
+  model = c("optimal_glm", "optimal_gam"),
+  un_balanced_mean_diff = 
+    c(mean(c(abs(balances[["optimal_glm"]][7,4])-0.1, 
+           abs(balances[["optimal_glm"]][11,4])-0.1)),
+       mean(c(abs(balances[["optimal_gam"]][7,4])-0.1,
+              abs(balances[["optimal_gam"]][11,4])-0.1))))
+tie_breaker
+
+
+
+
+
+
+```
+
+
+```{r}
+set.seed(125)
+optimal_glm <- matchit(formula, "optimal", data = final_contests, distance = "glm")
+bal.tab(optimal_glm, stats = c("mean.diffs", "variance.ratios"), binary = "std", thresholds = c(m=0.1, v=2), un = TRUE)
+love.plot(optimal_glm, stats = c("mean.diffs", "variance.ratios"), binary = "std", thresholds = c(m=0.1, v=2), un = TRUE)
+```
+
+
+```{r}
+for(i in seq_along(bals)) {
+  bal.plot(optimal_glm, var.name = bals[i], which = "both") %>% print()
+  }
+
+matched_data <- match.data(optimal_glm)
+write_csv(matched_data, "../data/matched_data.csv")
+t.test(turnout ~ council.manager, matched_data)
+t.test(turnout ~ council.manager, final_contests)
+
+
+```
+
+```{r}
+lm_ref_matched <- lm(turnout ~ council.manager, data = matched_data, weights = weights)
+summary(lm_ref_matched)
+lm_full_matched <- lm(turnout ~ council.manager + concurrent+office+has_mayor+
+                incumbent + margin + log.pop+ percent_women + percent_black + percent_hispanic +
+                percent_asian_american, data = matched_data, weights = weights)
+lm_full_matched_state <- lm(turnout ~ council.manager + concurrent+office+has_mayor+
+                incumbent + margin + log.pop+ state+percent_women + percent_black + percent_hispanic +
+                percent_asian_american, data = matched_data, weights = weights)
+ 
+summary(lm_full_matched)
+summary(lm_full_matched_state)
+ggplot(augment(lm_full_matched), aes(.fitted, .resid))+
+  geom_hline(yintercept=0, color = "blue", linetype=2)+geom_point()+theme_minimal()
+```
+
+
+```{r}
+predictions_full <- function(data, lm) {
+    data <- data.frame(
+    contest = data$contest,
+    city = data$city,
+    turnout = data$turnout,
+    log.pop = data$log.pop,
+    year = data$year,
+    month = data$month,
+    incumbent = data$incumbent,
+    concurrent = data$concurrent,
+    office = data$office,
+    council.manager.real = data$council.manager,
+    council.manager = if_else(data$council.manager==0,1,0),
+    mayor = data$mayor,
+    has_mayor = data$has_mayor,
+    margin = data$margin,
+    percent_women = data$percent_women, 
+    percent_white = data$percent_white,
+    percent_black = data$percent_black,
+    percent_hispanic = data$percent_hispanic,
+    percent_asian_american = data$percent_asian_american) %>%
+    add_predictions(model = lm)
+}
+
+matched_pred <- predictions_full(matched_data, lm_full_matched)%>%
+  mutate(y1 = if_else(council.manager.real==1, turnout, pred),
+         y0 = if_else(council.manager.real==1, pred, turnout),
+         diff = y1-y0)
+unmatched_pred <- predictions_full(final_contests, lm_full) %>%
+  mutate(y1 = if_else(council.manager.real==1, turnout, pred),
+         y0 = if_else(council.manager.real==1, pred, turnout),
+         diff = y1-y0)
+
+unmatched_pred %>% 
+   summarize(mean1=mean(y1),
+            mean2=mean(y0),
+            mean3=mean(diff))
+matched_pred %>% 
+  summarize(mean1=mean(y1),
+            mean2=mean(y0),
+            mean3=mean(diff))
+
+
+t.test(unmatched_pred$diff, mu=0) #use one sample test, because half the data points are fake, from the regression
+t.test(matched_pred$diff, mu=0) ## not independent observations, quantities that are relying on a model not the data
+t.test(turnout ~ council.manager, data = matched_data)
+t.test(turnout ~ council.manager, data = final_contests)
+
+
+
+
+```
+
+```{r}
+power.t.test(n = 97, delta = -2.3, sd = sd(matched_data$turnout), sig.level = 0.05)
+```
+
