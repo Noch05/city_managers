@@ -1,0 +1,419 @@
+contest,total.votes,year,city,office,state,council.manager,pop.estimate,turnout
+1304204_2010_11_augusta-richmond county_GA_Mayor_mayor_1,49299,2010,augusta-richmond county consolidated government (balance),Mayor,Georgia,1,193532,25.473306739970653
+2360545_2010_12_portland_ME_Mayor_mayor_1,9,2010,portland city,Mayor,Maine,1,66138,0.013607910732105597
+2603000_2010_11_ann arbor_MI_Mayor_mayor_1,33940,2010,ann arbor city,Mayor,Michigan,1,115204,29.46078261171487
+2915670_2010_4_columbia_MO_Mayor_mayor_1,18334,2010,columbia city,Mayor,Missouri,1,104620,17.524373924679793
+3451000_2010_5_newark_NJ_Mayor_mayor_1,38462,2010,newark city,Mayor,New Jersey,0,274674,14.002781479135265
+3825700_2010_6_fargo_ND_Mayor_mayor_1,9473,2010,fargo city,Mayor,North Dakota,1,102527,9.239517395417792
+4131250_2010_11_gresham_OR_Mayor_mayor_1,19573,2010,gresham city,Mayor,Oregon,1,101450,19.293247905372105
+423620_2010_5_flagstaff_AZ_Mayor_mayor_1,11805,2010,flagstaff city,Mayor,Arizona,1,63909,18.47157677322443
+4419180_2010_11_cranston_RI_Mayor_mayor_1,27278,2010,cranston city,Mayor,Rhode Island,0,80580,33.85207247455944
+4459000_2010_11_providence_RI_Mayor_mayor_1,33534,2010,providence city,Mayor,Rhode Island,0,178286,18.809104472588984
+4845000_2010_5_lubbock_TX_Mayor_mayor_1,11483,2010,lubbock city,Mayor,Texas,1,222272,5.166192772818889
+5157000_2010_5_norfolk_VA_Mayor_mayor_1,26205,2010,norfolk city,Mayor,Virginia,1,242143,10.822117509075216
+541000_2010_11_little rock_AR_Mayor_mayor_1,54251,2010,little rock city,Mayor,Arkansas,1,190718,28.445663230528844
+614890_2010_11_colton_CA_Mayor_mayor_1,8185,2010,colton city,Mayor,California,1,52187,15.683982601030907
+622804_2010_11_escondido_CA_Mayor_mayor_1,31016,2010,escondido city,Mayor,California,1,140998,21.997475141491368
+636770_2010_11_irvine_CA_Mayor_mayor_1,54017,2010,irvine city,Mayor,California,1,199117,27.12827131786839
+656784_2010_11_petaluma_CA_Mayor_mayor_1,21586,2010,petaluma city,Mayor,California,1,56689,38.077933990721306
+669000_2010_11_santa ana_CA_Mayor_mayor_1,43652,2010,santa ana city,Mayor,California,1,325216,13.422463839417494
+669084_2010_11_santa clara_CA_Mayor_mayor_1,24055,2010,santa clara city,Mayor,California,1,112466,21.388686358543914
+681554_2010_11_vacaville_CA_Mayor_mayor_1,24643,2010,vacaville city,Mayor,California,1,91928,26.806848838221214
+937000_2010_6_hartford_CT_Mayor_mayor_1,1,2010,hartford city,Mayor,Connecticut,0,124760,8.01538954793203e-4
+1304204_2010_11_augusta-richmond county_GA_City Council_synthetic at-large c_1,49299,2010,augusta-richmond county consolidated government (balance),City Council,Georgia,1,193532,25.473306739970653
+3451000_2010_5_newark_NJ_City Council_synthetic at-large c_4,101175,2010,newark city,City Council,New Jersey,0,274674,36.83457480504161
+4419180_2010_11_cranston_RI_City Council_synthetic at-large c_3,63077,2010,cranston city,City Council,Rhode Island,0,80580,78.27872921320427
+602252_2010_11_antioch_CA_City Council_synthetic at-large c_2,37976,2010,antioch city,City Council,California,1,99717,38.08377708916233
+602462_2010_4_arcadia_CA_City Council_synthetic at-large c_3,19268,2010,arcadia city,City Council,California,1,55704,34.589975585236246
+622678_2010_11_encinitas_CA_City Council_synthetic at-large c_2,38642,2010,encinitas city,City Council,California,1,58761,65.76130426643522
+622804_2010_11_escondido_CA_City Council_synthetic at-large c_2,53394,2010,escondido city,City Council,California,1,140998,37.86862224996099
+629504_2010_11_gilroy_CA_City Council_synthetic at-large c_3,23490,2010,gilroy city,City Council,California,1,46807,50.18480141859124
+650258_2010_11_napa_CA_City Council_synthetic at-large c_2,37498,2010,napa city,City Council,California,1,76006,49.3355787700971
+655184_2010_11_palm desert_CA_City Council_synthetic at-large c_2,25303,2010,palm desert city,City Council,California,1,48534,52.13458606337825
+656784_2010_11_petaluma_CA_City Council_synthetic at-large c_3,55844,2010,petaluma city,City Council,California,1,56689,98.50941099684242
+659920_2010_11_redding_CA_City Council_synthetic at-large c_3,80693,2010,redding city,City Council,California,1,89380,90.28082345043634
+681554_2010_11_vacaville_CA_City Council_synthetic at-large c_2,42591,2010,vacaville city,City Council,California,1,91928,46.33082412322687
+685292_2010_4_whittier_CA_City Council_synthetic at-large c_2,13462,2010,whittier city,City Council,California,1,84997,15.83820605433133
+686328_2010_6_woodland_CA_City Council_synthetic at-large c_2,13774,2010,woodland city,City Council,California,1,54785,25.141918408323445
+1230000_2011_11_hialeah_FL_Mayor_mayor_1,30853,2011,hialeah city,Mayor,Florida,0,225160,13.702700302007461
+1714000_2011_2_chicago_IL_Mayor_mayor_1,590391,2011,chicago city,Mayor,Illinois,0,2700741,21.86033388614458
+1805860_2011_11_bloomington_IN_Mayor_mayor_1,3969,2011,bloomington city,Mayor,Indiana,0,79662,4.982300218422837
+1827000_2011_11_gary_IN_Mayor_mayor_1,13316,2011,gary city,Mayor,Indiana,0,82797,16.082708310687586
+1840788_2011_11_lafayette_IN_Mayor_mayor_1,6074,2011,lafayette city,Mayor,Indiana,0,66821,9.089956750123465
+1851876_2011_11_muncie_IN_Mayor_mayor_1,13857,2011,muncie city,Mayor,Indiana,0,69869,19.832830010448124
+1973335_2011_11_sioux city_IA_Mayor_mayor_1,10492,2011,sioux city city,Mayor,Iowa,1,82316,12.746003207152922
+2079000_2011_4_wichita_KS_Mayor_mayor_1,24679,2011,wichita city,Mayor,Kansas,0,377906,6.530459955650347
+2360545_2011_11_portland_ME_Mayor_mayor_1,29261,2011,portland city,Mayor,Maine,1,66240,44.17421497584541
+2545000_2011_11_new bedford_MA_Mayor_mayor_1,18915,2011,new bedford city,Mayor,Massachusetts,0,95006,19.90926888828074
+2634000_2011_11_grand rapids_MI_Mayor_mayor_1,17360,2011,grand rapids city,Mayor,Michigan,1,189853,9.14391660916604
+3774440_2011_11_wilmington_NC_Mayor_mayor_1,11219,2011,wilmington city,Mayor,North Carolina,1,105900,10.59395656279509
+3925256_2011_11_elyria_OH_Mayor_mayor_1,13197,2011,elyria city,Mayor,Ohio,0,54844,24.062796294945667
+4263624_2011_11_reading_PA_Mayor_mayor_1,7830,2011,reading city,Mayor,Pennsylvania,0,87798,8.918198592223057
+455000_2011_11_phoenix_AZ_Mayor_mayor_1,146878,2011,phoenix city,Mayor,Arizona,1,1455565,10.090789487243786
+4550875_2011_11_north charleston_SC_Mayor_mayor_1,7841,2011,north charleston city,Mayor,South Carolina,0,96221,8.148948774176116
+4748000_2011_10_memphis_TN_Mayor_mayor_1,73881,2011,memphis city,Mayor,Tennessee,0,652123,11.329304441033363
+622230_2011_11_el monte_CA_Mayor_mayor_1,5679,2011,el monte city,Mayor,California,1,113763,4.991956963160255
+646898_2011_11_merced_CA_Mayor_mayor_1,6926,2011,merced city,Mayor,California,1,78111,8.86686894291457
+648354_2011_11_modesto_CA_Mayor_mayor_1,23964,2011,modesto city,Mayor,California,1,201886,11.870065284368406
+655156_2011_11_palmdale_CA_Mayor_mayor_1,7584,2011,palmdale city,Mayor,California,1,149001,5.089898725511909
+681666_2011_11_vallejo_CA_Mayor_mayor_1,18054,2011,vallejo city,Mayor,California,1,116021,15.560976030201429
+843000_2011_11_lakewood_CO_Mayor_mayor_1,29480,2011,lakewood city,Mayor,Colorado,1,142732,20.654092985455257
+877290_2011_11_thornton_CO_Mayor_mayor_1,15101,2011,thornton city,Mayor,Colorado,1,115683,13.053776267904531
+908000_2011_11_bridgeport_CT_Mayor_mayor_1,12218,2011,bridgeport city,Mayor,Connecticut,0,143412,8.5195102222966
+908420_2011_11_bristol_CT_Mayor_mayor_1,8798,2011,bristol city,Mayor,Connecticut,0,60473,14.548641542506575
+937000_2011_11_hartford_CT_Mayor_mayor_1,4066,2011,hartford city,Mayor,Connecticut,0,124817,3.2575690811347813
+952000_2011_11_new haven_CT_Mayor_mayor_1,15462,2011,new haven city,Mayor,Connecticut,1,129213,11.96628822177335
+980000_2011_11_waterbury_CT_Mayor_mayor_1,16636,2011,waterbury city,Mayor,Connecticut,0,110075,15.11333181921417
+1840788_2011_11_lafayette_IN_City Council_synthetic at-large d_1,21723,2011,lafayette city,City Council,Indiana,0,66821,32.50924110683767
+1973335_2011_11_sioux city_IA_City Council_synthetic at-large d_1,10268,2011,sioux city city,City Council,Iowa,1,82316,12.473881140968949
+3774440_2011_11_wilmington_NC_City Council_synthetic at-large d_3,31045,2011,wilmington city,City Council,North Carolina,1,105900,29.31539187913126
+622230_2011_11_el monte_CA_City Council_synthetic at-large d_2,10542,2011,el monte city,City Council,California,1,113763,9.26663326389072
+646898_2011_11_merced_CA_City Council_synthetic at-large d_3,17306,2011,merced city,City Council,California,1,78111,22.15565029253242
+652526_2011_3_norwalk_CA_City Council_synthetic at-large d_3,14752,2011,norwalk city,City Council,California,1,105348,14.003113490526637
+655156_2011_11_palmdale_CA_City Council_synthetic at-large d_2,9376,2011,palmdale city,City Council,California,1,149001,6.2925752176159895
+660102_2011_11_redwood city_CA_City Council_synthetic at-large d_4,22676,2011,redwood city city,City Council,California,1,76031,29.824676776577974
+673262_2011_11_south san francisco_CA_City Council_synthetic at-large d_2,10276,2011,south san francisco city,City Council,California,1,62822,16.357327051033078
+681666_2011_11_vallejo_CA_City Council_synthetic at-large d_3,45093,2011,vallejo city,City Council,California,1,116021,38.866239732462226
+937000_2011_11_hartford_CT_City Council_synthetic at-large d_9,20142,2011,hartford city,City Council,Connecticut,0,124817,16.137224897249574
+2603000_2012_11_ann arbor_MI_Mayor_mayor_1,49914,2012,ann arbor city,Mayor,Michigan,1,114725,43.507517977772935
+2708794_2012_11_burnsville_MN_Mayor_mayor_1,28979,2012,burnsville city,Mayor,Minnesota,1,60676,47.7602346891687
+423620_2012_5_flagstaff_AZ_Mayor_mayor_1,10304,2012,flagstaff city,Mayor,Arizona,1,65660,15.692963752665246
+427820_2012_11_glendale_AZ_Mayor_mayor_1,58947,2012,glendale city,Mayor,Arizona,1,229331,25.703895243120208
+4419180_2012_11_cranston_RI_Mayor_mayor_1,27772,2012,cranston city,Mayor,Rhode Island,0,80446,34.522536857022104
+4733280_2012_11_hendersonville_TN_Mayor_mayor_1,14321,2012,hendersonville city,Mayor,Tennessee,0,51500,27.80776699029126
+4845000_2012_5_lubbock_TX_Mayor_mayor_1,19060,2012,lubbock city,Mayor,Texas,1,229428,8.307617204526037
+550450_2012_11_north little rock_AR_Mayor_mayor_1,13816,2012,north little rock city,Mayor,Arkansas,0,62817,21.99404619768534
+602252_2012_11_antioch_CA_Mayor_mayor_1,30792,2012,antioch city,Mayor,California,1,102575,30.019010480136487
+629504_2012_11_gilroy_CA_Mayor_mayor_1,15185,2012,gilroy city,Mayor,California,1,48832,31.0964121887287
+636770_2012_11_irvine_CA_Mayor_mayor_1,71197,2012,irvine city,Mayor,California,1,213880,33.288292500467556
+648354_2012_2_modesto_CA_Mayor_mayor_1,27693,2012,modesto city,Mayor,California,1,201986,13.710356163298446
+650258_2012_11_napa_CA_Mayor_mayor_1,29157,2012,napa city,Mayor,California,1,77121,37.806823044306995
+658072_2012_11_pomona_CA_Mayor_mayor_1,29225,2012,pomona city,Mayor,California,1,149431,19.557521531676826
+660466_2012_11_rialto_CA_Mayor_mayor_1,20998,2012,rialto city,Mayor,California,1,100009,20.996110350068495
+669000_2012_11_santa ana_CA_Mayor_mayor_1,56231,2012,santa ana city,Mayor,California,1,326608,17.216663400774017
+4419180_2012_11_cranston_RI_City Council_synthetic at-large a_3,78880,2012,cranston city,City Council,Rhode Island,0,80446,98.05335255948089
+602252_2012_11_antioch_CA_City Council_synthetic at-large a_2,47512,2012,antioch city,City Council,California,1,102575,46.31927857665123
+602462_2012_4_arcadia_CA_City Council_synthetic at-large a_2,12404,2012,arcadia city,City Council,California,1,56497,21.95514806095899
+622804_2012_11_escondido_CA_City Council_synthetic at-large a_2,64293,2012,escondido city,City Council,California,1,144311,44.55169737580642
+629504_2012_11_gilroy_CA_City Council_synthetic at-large a_3,30395,2012,gilroy city,City Council,California,1,48832,62.24402031454783
+650258_2012_11_napa_CA_City Council_synthetic at-large a_2,49896,2012,napa city,City Council,California,1,77121,64.69833119383826
+655184_2012_11_palm desert_CA_City Council_synthetic at-large a_3,37675,2012,palm desert city,City Council,California,1,48959,76.95214363038461
+657456_2012_11_pittsburg_CA_City Council_synthetic at-large a_2,26814,2012,pittsburg city,City Council,California,1,63612,42.15242407093001
+659920_2012_11_redding_CA_City Council_synthetic at-large a_2,52116,2012,redding city,City Council,California,1,90088,57.85010212236924
+660466_2012_11_rialto_CA_City Council_synthetic at-large a_2,30420,2012,rialto city,City Council,California,1,100009,30.417262446379826
+681554_2012_11_vacaville_CA_City Council_synthetic at-large a_2,52165,2012,vacaville city,City Council,California,1,92672,56.28992575966851
+685292_2012_4_whittier_CA_City Council_synthetic at-large a_3,20580,2012,whittier city,City Council,California,1,85423,24.091872212401814
+686328_2012_6_woodland_CA_City Council_synthetic at-large a_3,20993,2012,woodland city,City Council,California,1,55585,37.767383286857964
+1230000_2013_11_hialeah_FL_Mayor_mayor_1,18256,2013,hialeah city,Mayor,Florida,0,228943,7.974037205767375
+1245000_2013_11_miami_FL_Mayor_mayor_1,26169,2013,miami city,Mayor,Florida,1,407526,6.421430779876622
+1756640_2013_4_orland park_IL_Mayor_mayor_1,4346,2013,orland park village,Mayor,Illinois,1,57194,7.598699164247997
+2053775_2013_4_overland park_KS_Mayor_mayor_1,6229,2013,overland park city,Mayor,Kansas,1,176520,3.528778608656243
+2071000_2013_4_topeka_KS_Mayor_mayor_1,10951,2013,topeka city,Mayor,Kansas,1,127625,8.580607247796278
+2208920_2013_4_bossier city_LA_Mayor_mayor_1,1,2013,bossier city city,Mayor,Louisiana,0,63606,0.0015721787252774896
+2537490_2013_11_lynn_MA_Mayor_mayor_1,15661,2013,lynn city,Mayor,Massachusetts,1,90788,17.250077102700796
+2674900_2013_11_southfield_MI_Mayor_mayor_1,9966,2013,southfield city,Mayor,Michigan,1,72331,13.778324646417165
+2686000_2013_11_westland_MI_Mayor_mayor_1,5634,2013,westland city,Mayor,Michigan,0,83476,6.749245292059994
+2915670_2013_4_columbia_MO_Mayor_mayor_1,12832,2013,columbia city,Mayor,Missouri,1,111145,11.545278689999549
+3451000_2013_11_newark_NJ_Mayor_mayor_1,1,2013,newark city,Mayor,New Jersey,0,277357,3.605461553160728e-4
+3702140_2013_11_asheville_NC_Mayor_mayor_1,12131,2013,asheville city,Mayor,North Carolina,1,84883,14.291436447816405
+3774440_2013_11_wilmington_NC_Mayor_mayor_1,6744,2013,wilmington city,Mayor,North Carolina,1,108530,6.213950059891275
+3915000_2013_11_cincinnati_OH_Mayor_mayor_1,57716,2013,cincinnati city,Mayor,Ohio,1,297150,19.42318694262157
+4714000_2013_3_chattanooga_TN_Mayor_mayor_1,17789,2013,chattanooga city,Mayor,Tennessee,0,170246,10.448997333270679
+4824000_2013_6_el paso_TX_Mayor_mayor_1,44762,2013,el paso city,Mayor,Texas,1,660795,6.773961667385498
+4848072_2013_11_midland_TX_Mayor_mayor_1,13627,2013,midland city,Mayor,Texas,1,115903,11.757245282693287
+622230_2013_11_el monte_CA_Mayor_mayor_1,4543,2013,el monte city,Mayor,California,1,114412,3.970737335244555
+644000_2013_5_los angeles_CA_Mayor_mayor_1,409909,2013,los angeles city,Mayor,California,0,3827261,10.710244219038106
+646898_2013_11_merced_CA_Mayor_mayor_1,7209,2013,merced city,Mayor,California,1,79639,9.052097590376574
+655156_2013_11_palmdale_CA_Mayor_mayor_1,9396,2013,palmdale city,Mayor,California,1,153885,6.1058582707866265
+952000_2013_11_new haven_CT_Mayor_mayor_1,20788,2013,new haven city,Mayor,Connecticut,1,130338,15.949301048044315
+980000_2013_11_waterbury_CT_Mayor_mayor_1,11538,2013,waterbury city,Mayor,Connecticut,0,110052,10.484134772652927
+1973335_2013_11_sioux city_IA_City Council_synthetic at-large b_3,18434,2013,sioux city city,City Council,Iowa,1,82602,22.316650928548945
+3451000_2013_11_newark_NJ_City Council_synthetic at-large b_1,20089,2013,newark city,City Council,New Jersey,0,277357,7.243011714144585
+3774440_2013_11_wilmington_NC_City Council_synthetic at-large b_3,22854,2013,wilmington city,City Council,North Carolina,1,108530,21.057772044595964
+622230_2013_11_el monte_CA_City Council_synthetic at-large b_2,7138,2013,el monte city,City Council,California,1,114412,6.238856064049226
+646898_2013_11_merced_CA_City Council_synthetic at-large b_3,18020,2013,merced city,City Council,California,1,79639,22.627104810457187
+652526_2013_3_norwalk_CA_City Council_synthetic at-large b_2,8372,2013,norwalk city,City Council,California,1,105940,7.902586369643194
+655156_2013_11_palmdale_CA_City Council_synthetic at-large b_2,15245,2013,palmdale city,City Council,California,1,153885,9.906748545992137
+660102_2013_11_redwood city_CA_City Council_synthetic at-large b_3,19941,2013,redwood city city,City Council,California,1,78241,25.486637440728003
+673262_2013_11_south san francisco_CA_City Council_synthetic at-large b_1,5676,2013,south san francisco city,City Council,California,1,64630,8.782299241838155
+673262_2013_11_south san francisco_CA_City Council_synthetic at-large b_3,15496,2013,south san francisco city,City Council,California,1,64630,23.97648151013461
+681666_2013_11_vallejo_CA_City Council_synthetic at-large b_1,13545,2013,vallejo city,City Council,California,1,117079,11.56911145465882
+681666_2013_11_vallejo_CA_City Council_synthetic at-large b_3,35714,2013,vallejo city,City Council,California,1,117079,30.504189478898862
+980000_2013_11_waterbury_CT_City Council_synthetic at-large b_15,67843,2013,waterbury city,City Council,Connecticut,0,110052,61.64631265220078
+1304204_2014_5_augusta-richmond county_GA_Mayor_mayor_1,27532,2014,augusta-richmond county consolidated government (balance),Mayor,Georgia,1,196551,14.00756037873122
+2603000_2014_11_ann arbor_MI_Mayor_mayor_1,33132,2014,ann arbor city,Mayor,Michigan,1,115985,28.565762814157004
+2717288_2014_11_eagan_MN_Mayor_mayor_1,18680,2014,eagan city,Mayor,Minnesota,0,65053,28.715047730312204
+2735180_2014_11_lakeville_MN_Mayor_mayor_1,15251,2014,lakeville city,Mayor,Minnesota,0,57715,26.424672961968295
+3451000_2014_5_newark_NJ_Mayor_mayor_1,44951,2014,newark city,Mayor,New Jersey,0,278750,16.125919282511212
+3825700_2014_6_fargo_ND_Mayor_mayor_1,13751,2014,fargo city,Mayor,North Dakota,1,110725,12.419056220365771
+4131250_2014_11_gresham_OR_Mayor_mayor_1,20771,2014,gresham city,Mayor,Oregon,1,108250,19.187990762124713
+423620_2014_11_flagstaff_AZ_Mayor_mayor_1,15417,2014,flagstaff city,Mayor,Arizona,1,67419,22.867440929114938
+4459000_2014_11_providence_RI_Mayor_mayor_1,38335,2014,providence city,Mayor,Rhode Island,0,178562,21.468733549131393
+4845000_2014_5_lubbock_TX_Mayor_mayor_1,1,2014,lubbock city,Mayor,Texas,1,236868,4.2217606430585813e-4
+5157000_2014_5_norfolk_VA_Mayor_mayor_1,15676,2014,norfolk city,Mayor,Virginia,1,244745,6.4050338107009335
+541000_2014_11_little rock_AR_Mayor_mayor_1,52046,2014,little rock city,Mayor,Arkansas,1,196188,26.528635798315904
+614890_2014_11_colton_CA_Mayor_mayor_1,5336,2014,colton city,Mayor,California,1,53129,10.04347907922227
+622678_2014_11_encinitas_CA_Mayor_mayor_1,18270,2014,encinitas city,Mayor,California,1,61008,29.94689221085759
+622804_2014_11_escondido_CA_Mayor_mayor_1,27432,2014,escondido city,Mayor,California,1,147603,18.584988109997763
+636770_2014_11_irvine_CA_Mayor_mayor_1,40411,2014,irvine city,Mayor,California,1,229850,17.581466173591473
+656784_2014_11_petaluma_CA_Mayor_mayor_1,14003,2014,petaluma city,Mayor,California,1,58912,23.769350896252035
+669000_2014_11_santa ana_CA_Mayor_mayor_1,33170,2014,santa ana city,Mayor,California,1,331266,10.013101253977167
+669084_2014_11_santa clara_CA_Mayor_mayor_1,21380,2014,santa clara city,Mayor,California,1,119525,17.887471240326292
+681554_2014_11_vacaville_CA_Mayor_mayor_1,19760,2014,vacaville city,Mayor,California,1,93994,21.022618465008406
+1304204_2014_5_augusta-richmond county_GA_City Council_synthetic at-large c_1,27532,2014,augusta-richmond county consolidated government (balance),City Council,Georgia,1,196551,14.00756037873122
+2708794_2014_11_burnsville_MN_City Council_synthetic at-large c_2,27169,2014,burnsville city,City Council,Minnesota,1,61059,44.49630685075091
+2735180_2014_11_lakeville_MN_City Council_synthetic at-large c_2,26365,2014,lakeville city,City Council,Minnesota,0,57715,45.68136532963701
+3413690_2014_11_clifton_NJ_City Council_synthetic at-large c_7,59606,2014,clifton city,City Council,New Jersey,1,85138,70.01104089830628
+3451000_2014_5_newark_NJ_City Council_synthetic at-large c_4,99083,2014,newark city,City Council,New Jersey,0,278750,35.545470852017935
+4419180_2014_11_cranston_RI_City Council_synthetic at-large c_3,62153,2014,cranston city,City Council,Rhode Island,0,80680,77.03644025780862
+4848072_2014_5_midland_TX_City Council_synthetic at-large c_1,2265,2014,midland city,City Council,Texas,1,119409,1.8968419465869406
+602252_2014_11_antioch_CA_City Council_synthetic at-large c_2,27317,2014,antioch city,City Council,California,1,105630,25.86102433020922
+602462_2014_4_arcadia_CA_City Council_synthetic at-large c_3,15260,2014,arcadia city,City Council,California,1,57251,26.654556252292537
+622678_2014_11_encinitas_CA_City Council_synthetic at-large c_1,16690,2014,encinitas city,City Council,California,1,61008,27.357067925517963
+629504_2014_11_gilroy_CA_City Council_synthetic at-large c_3,19711,2014,gilroy city,City Council,California,1,50776,38.81952103355916
+650258_2014_11_napa_CA_City Council_synthetic at-large c_2,33274,2014,napa city,City Council,California,1,78511,42.3813223624715
+655184_2014_11_palm desert_CA_City Council_synthetic at-large c_2,20310,2014,palm desert city,City Council,California,1,49953,40.65821872560206
+656784_2014_11_petaluma_CA_City Council_synthetic at-large c_3,34208,2014,petaluma city,City Council,California,1,58912,58.06626833242803
+657456_2014_11_pittsburg_CA_City Council_synthetic at-large c_3,21501,2014,pittsburg city,City Council,California,1,65761,32.69567068627302
+659920_2014_11_redding_CA_City Council_synthetic at-large c_3,69305,2014,redding city,City Council,California,1,90725,76.39019013502342
+660466_2014_11_rialto_CA_City Council_synthetic at-large c_2,8760,2014,rialto city,City Council,California,1,101367,8.641865695936547
+660466_2014_11_rialto_CA_City Council_synthetic at-large c_3,6009,2014,rialto city,City Council,California,1,101367,5.927964722246886
+681554_2014_11_vacaville_CA_City Council_synthetic at-large c_2,29322,2014,vacaville city,City Council,California,1,93994,31.195608230312573
+685292_2014_4_whittier_CA_City Council_synthetic at-large c_2,9628,2014,whittier city,City Council,California,1,86400,11.143518518518517
+686328_2014_6_woodland_CA_City Council_synthetic at-large c_2,11836,2014,woodland city,City Council,California,1,56390,20.9895371519773
+1371492_2015_11_smyrna_GA_Mayor_mayor_1,5122,2015,smyrna city,Mayor,Georgia,1,53829,9.515317022422858
+1714000_2015_4_chicago_IL_Mayor_mayor_1,590733,2015,chicago city,Mayor,Illinois,0,2717534,21.7378329029186
+1805860_2015_11_bloomington_IN_Mayor_mayor_1,8070,2015,bloomington city,Mayor,Indiana,0,82813,9.744846823566348
+1827000_2015_11_gary_IN_Mayor_mayor_1,9683,2015,gary city,Mayor,Indiana,0,78483,12.337703706535173
+1840788_2015_11_lafayette_IN_Mayor_mayor_1,5125,2015,lafayette city,Mayor,Indiana,0,70661,7.252940094252841
+1851876_2015_11_muncie_IN_Mayor_mayor_1,3269,2015,muncie city,Mayor,Indiana,0,70173,4.658486882419164
+1973335_2015_11_sioux city_IA_Mayor_mayor_1,2126,2015,sioux city city,Mayor,Iowa,1,82792,2.5678809546816117
+2079000_2015_4_wichita_KS_Mayor_mayor_1,35770,2015,wichita city,Mayor,Kansas,0,387147,9.239384523191449
+2360545_2015_11_portland_ME_Mayor_mayor_1,17930,2015,portland city,Mayor,Maine,1,66490,26.96646112197323
+2545000_2015_11_new bedford_MA_Mayor_mayor_1,12198,2015,new bedford city,Mayor,Massachusetts,0,94909,12.852311161217585
+2634000_2015_8_grand rapids_MI_Mayor_mayor_1,20016,2015,grand rapids city,Mayor,Michigan,1,192416,10.402461333776817
+2674900_2015_11_southfield_MI_Mayor_mayor_1,12469,2015,southfield city,Mayor,Michigan,1,72859,17.11387748939733
+2757220_2015_11_st. louis park_MN_Mayor_mayor_1,4320,2015,st. louis park city,Mayor,Minnesota,1,47043,9.183087813277215
+3774440_2015_11_wilmington_NC_Mayor_mayor_1,5728,2015,wilmington city,Mayor,North Carolina,1,111998,5.114377042447186
+3825700_2015_4_fargo_ND_Mayor_mayor_1,14464,2015,fargo city,Mayor,North Dakota,1,113464,12.747655644080941
+3925256_2015_11_elyria_OH_Mayor_mayor_1,11355,2015,elyria city,Mayor,Ohio,0,54050,21.00832562442183
+4263624_2015_11_reading_PA_Mayor_mayor_1,9430,2015,reading city,Mayor,Pennsylvania,0,88057,10.708972597294935
+455000_2015_8_phoenix_AZ_Mayor_mayor_1,131103,2015,phoenix city,Mayor,Arizona,1,1514208,8.658189627845053
+4550875_2015_11_north charleston_SC_Mayor_mayor_1,10568,2015,north charleston city,Mayor,South Carolina,0,104146,10.147293222975438
+4748000_2015_10_memphis_TN_Mayor_mayor_1,101174,2015,memphis city,Mayor,Tennessee,0,657167,15.395477861791598
+622230_2015_11_el monte_CA_Mayor_mayor_1,5024,2015,el monte city,Mayor,California,1,115711,4.34185168220826
+648354_2015_11_modesto_CA_Mayor_mayor_1,23117,2015,modesto city,Mayor,California,1,207482,11.14168939956237
+843000_2015_11_lakewood_CO_Mayor_mayor_1,40877,2015,lakewood city,Mayor,Colorado,1,147836,27.650234043128876
+877290_2015_11_thornton_CO_Mayor_mayor_1,17882,2015,thornton city,Mayor,Colorado,1,127688,14.004448342835662
+908000_2015_11_bridgeport_CT_Mayor_mayor_1,20736,2015,bridgeport city,Mayor,Connecticut,0,147340,14.073571331613955
+937000_2015_11_hartford_CT_Mayor_mayor_1,9982,2015,hartford city,Mayor,Connecticut,0,124795,7.998717897351656
+952000_2015_11_new haven_CT_Mayor_mayor_1,12140,2015,new haven city,Mayor,Connecticut,1,130612,9.29470492757174
+980000_2015_11_waterbury_CT_Mayor_mayor_1,11510,2015,waterbury city,Mayor,Connecticut,0,109551,10.506522076475797
+1840788_2015_11_lafayette_IN_City Council_synthetic at-large d_1,12822,2015,lafayette city,City Council,Indiana,0,70661,18.145794709953154
+1973335_2015_11_sioux city_IA_City Council_synthetic at-large d_1,2483,2015,sioux city city,City Council,Iowa,1,82792,2.999082036911779
+2545000_2015_11_new bedford_MA_City Council_synthetic at-large d_5,41872,2015,new bedford city,City Council,Massachusetts,0,94909,44.118049921503754
+2757220_2015_11_st. louis park_MN_City Council_synthetic at-large d_1,7415,2015,st. louis park city,City Council,Minnesota,1,47043,15.762175031354293
+3413690_2015_11_clifton_NJ_City Council_synthetic at-large d_1,7009,2015,clifton city,City Council,New Jersey,1,85552,8.192678137273237
+3774440_2015_11_wilmington_NC_City Council_synthetic at-large d_3,18292,2015,wilmington city,City Council,North Carolina,1,111998,16.332434507759068
+622230_2015_11_el monte_CA_City Council_synthetic at-large d_2,8410,2015,el monte city,City Council,California,1,115711,7.268107612932219
+673262_2015_11_south san francisco_CA_City Council_synthetic at-large d_2,10992,2015,south san francisco city,City Council,California,1,66217,16.599966775903468
+937000_2015_11_hartford_CT_City Council_synthetic at-large d_9,49290,2015,hartford city,City Council,Connecticut,0,124795,39.49677471052526
+2603000_2016_11_ann arbor_MI_Mayor_mayor_1,48785,2016,ann arbor city,Mayor,Michigan,1,118087,41.31276093050039
+2708794_2016_11_burnsville_MN_Mayor_mayor_1,22802,2016,burnsville city,Mayor,Minnesota,1,61158,37.28375682658033
+2735180_2016_11_lakeville_MN_Mayor_mayor_1,28817,2016,lakeville city,Mayor,Minnesota,0,59786,48.20024754959355
+2915670_2016_4_columbia_MO_Mayor_mayor_1,17650,2016,columbia city,Mayor,Missouri,1,117165,15.064225664660949
+423620_2016_11_flagstaff_AZ_Mayor_mayor_1,26255,2016,flagstaff city,Mayor,Arizona,1,69270,37.90241085607045
+427820_2016_8_glendale_AZ_Mayor_mayor_1,25939,2016,glendale city,Mayor,Arizona,1,239943,10.810484156653873
+4419180_2016_11_cranston_RI_Mayor_mayor_1,35752,2016,cranston city,Mayor,Rhode Island,0,80882,44.20266561163176
+4845000_2016_5_lubbock_TX_Mayor_mayor_1,21153,2016,lubbock city,Mayor,Texas,1,244507,8.651286057249894
+5157000_2016_5_norfolk_VA_Mayor_mayor_1,31695,2016,norfolk city,Mayor,Virginia,1,245724,12.898617961615471
+535710_2016_11_jonesboro_AR_Mayor_mayor_1,20272,2016,jonesboro city,Mayor,Arkansas,0,72638,27.908257385941244
+550450_2016_11_north little rock_AR_Mayor_mayor_1,20126,2016,north little rock city,Mayor,Arkansas,0,66042,30.474546500711668
+602252_2016_11_antioch_CA_Mayor_mayor_1,33348,2016,antioch city,Mayor,California,1,108675,30.68599033816425
+622678_2016_11_encinitas_CA_Mayor_mayor_1,31353,2016,encinitas city,Mayor,California,1,62160,50.43918918918919
+629504_2016_11_gilroy_CA_Mayor_mayor_1,17745,2016,gilroy city,Mayor,California,1,52576,33.7511412051126
+636770_2016_11_irvine_CA_Mayor_mayor_1,79601,2016,irvine city,Mayor,California,1,246992,32.22816933341971
+646898_2016_11_merced_CA_Mayor_mayor_1,21557,2016,merced city,Mayor,California,1,81461,26.462970010188926
+648354_2016_2_modesto_CA_Mayor_mayor_1,26492,2016,modesto city,Mayor,California,1,208512,12.705263965623082
+650258_2016_11_napa_CA_Mayor_mayor_1,27514,2016,napa city,Mayor,California,1,79567,34.57966242286375
+655156_2016_11_palmdale_CA_Mayor_mayor_1,42020,2016,palmdale city,Mayor,California,1,156823,26.794539066335933
+658072_2016_11_pomona_CA_Mayor_mayor_1,33861,2016,pomona city,Mayor,California,1,151807,22.30529553973137
+660466_2016_11_rialto_CA_Mayor_mayor_1,24734,2016,rialto city,Mayor,California,1,102418,24.150051748716045
+669000_2016_11_santa ana_CA_Mayor_mayor_1,67667,2016,santa ana city,Mayor,California,1,333605,20.283568891353546
+681666_2016_11_vallejo_CA_Mayor_mayor_1,41223,2016,vallejo city,Mayor,California,1,119644,34.45471565644746
+685292_2016_4_whittier_CA_Mayor_mayor_1,8293,2016,whittier city,Mayor,California,1,86630,9.5728962253261
+2708794_2016_11_burnsville_MN_City Council_synthetic at-large a_2,43033,2016,burnsville city,City Council,Minnesota,1,61158,70.36364825533863
+2735180_2016_11_lakeville_MN_City Council_synthetic at-large a_2,43010,2016,lakeville city,City Council,Minnesota,0,59786,71.93991904459239
+4419180_2016_11_cranston_RI_City Council_synthetic at-large a_3,79493,2016,cranston city,City Council,Rhode Island,0,80882,98.28268341534582
+602252_2016_11_antioch_CA_City Council_synthetic at-large a_2,49227,2016,antioch city,City Council,California,1,108675,45.297446514837816
+602462_2016_4_arcadia_CA_City Council_synthetic at-large a_2,15745,2016,arcadia city,City Council,California,1,57755,27.261708942948665
+629504_2016_11_gilroy_CA_City Council_synthetic at-large a_3,39187,2016,gilroy city,City Council,California,1,52576,74.53400791235545
+650258_2016_11_napa_CA_City Council_synthetic at-large a_2,44310,2016,napa city,City Council,California,1,79567,55.688916259253205
+655184_2016_11_palm desert_CA_City Council_synthetic at-large a_3,42137,2016,palm desert city,City Council,California,1,51045,82.5487315114115
+656784_2016_11_petaluma_CA_City Council_synthetic at-large a_3,57740,2016,petaluma city,City Council,California,1,59757,96.62466321937178
+657456_2016_11_pittsburg_CA_City Council_synthetic at-large a_2,27294,2016,pittsburg city,City Council,California,1,67998,40.13941586517251
+659920_2016_11_redding_CA_City Council_synthetic at-large a_2,60841,2016,redding city,City Council,California,1,91320,66.6239597021463
+660466_2016_11_rialto_CA_City Council_synthetic at-large a_2,38533,2016,rialto city,City Council,California,1,102418,37.623269347185065
+681554_2016_11_vacaville_CA_City Council_synthetic at-large a_2,51342,2016,vacaville city,City Council,California,1,95607,53.70108883240767
+681666_2016_11_vallejo_CA_City Council_synthetic at-large a_3,97004,2016,vallejo city,City Council,California,1,119644,81.07719568051888
+1230000_2017_11_hialeah_FL_Mayor_mayor_1,14766,2017,hialeah city,Mayor,Florida,0,237523,6.216661123343845
+1245000_2017_11_miami_FL_Mayor_mayor_1,25471,2017,miami city,Mayor,Florida,1,443007,5.749570548546637
+1756640_2017_4_orland park_IL_Mayor_mayor_1,12396,2017,orland park village,Mayor,Illinois,1,59161,20.952992680989166
+2053775_2017_11_overland park_KS_Mayor_mayor_1,22937,2017,overland park city,Mayor,Kansas,1,186147,12.32198208942395
+2071000_2017_11_topeka_KS_Mayor_mayor_1,16097,2017,topeka city,Mayor,Kansas,1,127139,12.660945893864195
+2208920_2017_3_bossier city_LA_Mayor_mayor_1,1,2017,bossier city city,Mayor,Louisiana,0,67511,0.00148124009420687
+2537490_2017_11_lynn_MA_Mayor_mayor_1,14616,2017,lynn city,Mayor,Massachusetts,1,93069,15.704477323276278
+2545000_2017_11_new bedford_MA_Mayor_mayor_1,13867,2017,new bedford city,Mayor,Massachusetts,0,95125,14.577660972404729
+2670040_2017_11_royal oak_MI_Mayor_mayor_1,12011,2017,royal oak city,Mayor,Michigan,1,58973,20.366947586183507
+2674900_2017_11_southfield_MI_Mayor_mayor_1,10628,2017,southfield city,Mayor,Michigan,1,73228,14.513574042715902
+2686000_2017_11_westland_MI_Mayor_mayor_1,12681,2017,westland city,Mayor,Michigan,0,82172,15.43226403154359
+3702140_2017_11_asheville_NC_Mayor_mayor_1,16075,2017,asheville city,Mayor,North Carolina,1,89318,17.997492106854164
+3774440_2017_11_wilmington_NC_Mayor_mayor_1,10369,2017,wilmington city,Mayor,North Carolina,1,115261,8.996104493280468
+3915000_2017_11_cincinnati_OH_Mayor_mayor_1,62491,2017,cincinnati city,Mayor,Ohio,1,298957,20.90300611793669
+4714000_2017_3_chattanooga_TN_Mayor_mayor_1,18780,2017,chattanooga city,Mayor,Tennessee,0,176291,10.652841041232962
+4803000_2017_5_amarillo_TX_Mayor_mayor_1,14018,2017,amarillo city,Mayor,Texas,1,197823,7.086132552837637
+4824000_2017_6_el paso_TX_Mayor_mayor_1,30095,2017,el paso city,Mayor,Texas,1,678266,4.4370497710337835
+4856348_2017_6_pearland_TX_Mayor_mayor_1,13407,2017,pearland city,Mayor,Texas,1,113693,11.792282726289217
+644000_2017_3_los angeles_CA_Mayor_mayor_1,407147,2017,los angeles city,Mayor,California,0,3949776,10.308103548150578
+908420_2017_11_bristol_CT_Mayor_mayor_1,12485,2017,bristol city,Mayor,Connecticut,0,60498,20.637045852755463
+952000_2017_11_new haven_CT_Mayor_mayor_1,11359,2017,new haven city,Mayor,Connecticut,1,130884,8.678677302038446
+1973335_2017_11_sioux city_IA_City Council_synthetic at-large b_3,14192,2017,sioux city city,City Council,Iowa,1,82568,17.18825695184575
+2537490_2017_11_lynn_MA_City Council_synthetic at-large b_4,37249,2017,lynn city,City Council,Massachusetts,1,93069,40.022993692851536
+2545000_2017_11_new bedford_MA_City Council_synthetic at-large b_5,41327,2017,new bedford city,City Council,Massachusetts,0,95125,43.4449408672799
+3774440_2017_11_wilmington_NC_City Council_synthetic at-large b_3,29508,2017,wilmington city,City Council,North Carolina,1,115261,25.601027233843194
+652526_2017_3_norwalk_CA_City Council_synthetic at-large b_1,5376,2017,norwalk city,City Council,California,1,106404,5.052441637532423
+652526_2017_3_norwalk_CA_City Council_synthetic at-large b_2,9146,2017,norwalk city,City Council,California,1,106404,8.595541520995452
+1217100_2018_3_delray beach_FL_Mayor_mayor_1,8510,2018,delray beach city,Mayor,Florida,1,67353,12.63492346294894
+1304204_2018_5_augusta-richmond county_GA_Mayor_mayor_1,29872,2018,augusta-richmond county consolidated government (balance),Mayor,Georgia,1,196807,15.178321909281681
+1938595_2018_1_iowa city_IA_Mayor_mayor_1,1,2018,iowa city city,Mayor,Iowa,1,74566,0.0013410937961000993
+2603000_2018_11_ann arbor_MI_Mayor_mayor_1,42705,2018,ann arbor city,Mayor,Michigan,1,120641,35.39841347468936
+2717288_2018_11_eagan_MN_Mayor_mayor_1,27333,2018,eagan city,Mayor,Minnesota,0,66363,41.18710727363139
+2735180_2018_11_lakeville_MN_Mayor_mayor_1,27203,2018,lakeville city,Mayor,Minnesota,0,62489,43.53246171326153
+3451000_2018_5_newark_NJ_Mayor_mayor_1,28604,2018,newark city,Mayor,New Jersey,0,280463,10.198849759148265
+3825700_2018_6_fargo_ND_Mayor_mayor_1,8991,2018,fargo city,Mayor,North Dakota,1,120209,7.4794732507549355
+4131250_2018_11_gresham_OR_Mayor_mayor_1,33041,2018,gresham city,Mayor,Oregon,1,110770,29.828473413379076
+423620_2018_11_flagstaff_AZ_Mayor_mayor_1,18664,2018,flagstaff city,Mayor,Arizona,1,71202,26.21274683295413
+4459000_2018_11_providence_RI_Mayor_mayor_1,42123,2018,providence city,Mayor,Rhode Island,0,179435,23.475353191963663
+455000_2018_5_phoenix_AZ_Mayor_mayor_1,1,2018,phoenix city,Mayor,Arizona,1,1610071,6.210906227116691e-5
+4845000_2018_5_lubbock_TX_Mayor_mayor_1,14604,2018,lubbock city,Mayor,Texas,1,250415,5.831919014436036
+541000_2018_12_little rock_AR_Mayor_mayor_1,39001,2018,little rock city,Mayor,Arkansas,1,198135,19.68405380170086
+614890_2018_11_colton_CA_Mayor_mayor_1,9342,2018,colton city,Mayor,California,1,54415,17.168060277497013
+622230_2018_11_el monte_CA_Mayor_mayor_1,15431,2018,el monte city,Mayor,California,1,115669,13.340653070399156
+622678_2018_11_encinitas_CA_Mayor_mayor_1,29696,2018,encinitas city,Mayor,California,1,62713,47.35222362189658
+622804_2018_11_escondido_CA_Mayor_mayor_1,40822,2018,escondido city,Mayor,California,1,151115,27.013863613804055
+636770_2018_11_irvine_CA_Mayor_mayor_1,78633,2018,irvine city,Mayor,California,1,265502,29.616726051027864
+646898_2018_11_merced_CA_Mayor_mayor_1,16887,2018,merced city,Mayor,California,1,82289,20.52157639538699
+655156_2018_11_palmdale_CA_Mayor_mayor_1,37887,2018,palmdale city,Mayor,California,1,156904,24.1466119410595
+656784_2018_11_petaluma_CA_Mayor_mayor_1,27016,2018,petaluma city,Mayor,California,1,60635,44.555124927846954
+669000_2018_11_santa ana_CA_Mayor_mayor_1,56034,2018,santa ana city,Mayor,California,1,333499,16.801849480808038
+669084_2018_11_santa clara_CA_Mayor_mayor_1,31461,2018,santa clara city,Mayor,California,1,126209,24.927699292443485
+681554_2018_11_vacaville_CA_Mayor_mayor_1,30907,2018,vacaville city,Mayor,California,1,97943,31.556109165535055
+2708794_2018_11_burnsville_MN_City Council_synthetic at-large c_2,38382,2018,burnsville city,City Council,Minnesota,1,61283,62.63074588385034
+2735180_2018_11_lakeville_MN_City Council_synthetic at-large c_2,37897,2018,lakeville city,City Council,Minnesota,0,62489,60.64587367376658
+3451000_2018_5_newark_NJ_City Council_synthetic at-large c_4,78400,2018,newark city,City Council,New Jersey,0,280463,27.95377643396812
+4419180_2018_11_cranston_RI_City Council_synthetic at-large c_3,71534,2018,cranston city,City Council,Rhode Island,0,81196,88.1003990344352
+4848072_2018_11_midland_TX_City Council_synthetic at-large c_2,32738,2018,midland city,City Council,Texas,1,135134,24.22632350111741
+602252_2018_11_antioch_CA_City Council_synthetic at-large c_2,45023,2018,antioch city,City Council,California,1,110730,40.66016436376773
+622230_2018_11_el monte_CA_City Council_synthetic at-large c_2,24716,2018,el monte city,City Council,California,1,115669,21.367868659710034
+629504_2018_11_gilroy_CA_City Council_synthetic at-large c_1,14659,2018,gilroy city,City Council,California,1,55525,26.40072039621792
+629504_2018_11_gilroy_CA_City Council_synthetic at-large c_3,35397,2018,gilroy city,City Council,California,1,55525,63.74966231427285
+650258_2018_11_napa_CA_City Council_synthetic at-large c_2,50618,2018,napa city,City Council,California,1,79516,63.65762865335278
+655184_2018_11_palm desert_CA_City Council_synthetic at-large c_2,30160,2018,palm desert city,City Council,California,1,52124,57.86202133374262
+657456_2018_11_pittsburg_CA_City Council_synthetic at-large c_3,39733,2018,pittsburg city,City Council,California,1,70492,56.36526130624752
+659920_2018_11_redding_CA_City Council_synthetic at-large c_3,75920,2018,redding city,City Council,California,1,91327,83.12985207003405
+660102_2018_11_redwood city_CA_City Council_synthetic at-large c_3,69746,2018,redwood city city,City Council,California,1,85217,81.8451717380335
+660466_2018_11_rialto_CA_City Council_synthetic at-large c_2,28949,2018,rialto city,City Council,California,1,102873,28.14052278051578
+670000_2018_11_santa monica_CA_City Council_synthetic at-large c_3,10276,2018,santa monica city,City Council,California,1,92078,11.16010339060362
+673262_2018_11_south san francisco_CA_City Council_synthetic at-large c_3,44339,2018,south san francisco city,City Council,California,1,67294,65.88848931554077
+681554_2018_11_vacaville_CA_City Council_synthetic at-large c_2,47321,2018,vacaville city,City Council,California,1,97943,48.314836180227275
+681666_2018_11_vallejo_CA_City Council_synthetic at-large c_3,79927,2018,vallejo city,City Council,California,1,120977,66.06793026773684
+1371492_2019_12_smyrna_GA_Mayor_mayor_1,7375,2019,smyrna city,Mayor,Georgia,1,56268,13.106916897703847
+1714000_2019_4_chicago_IL_Mayor_mayor_1,523804,2019,chicago city,Mayor,Illinois,0,2709534,19.331885113824
+1805860_2019_11_bloomington_IN_Mayor_mayor_1,1,2019,bloomington city,Mayor,Indiana,0,84116,0.0011888344666888583
+1827000_2019_11_gary_IN_Mayor_mayor_1,6100,2019,gary city,Mayor,Indiana,0,76010,8.025259834232337
+1840788_2019_11_lafayette_IN_Mayor_mayor_1,3600,2019,lafayette city,Mayor,Indiana,0,72581,4.959975751229661
+1851876_2019_11_muncie_IN_Mayor_mayor_1,11583,2019,muncie city,Mayor,Indiana,0,68750,16.848
+1973335_2019_11_sioux city_IA_Mayor_mayor_1,9401,2019,sioux city city,Mayor,Iowa,1,82531,11.390871308962693
+2079000_2019_11_wichita_KS_Mayor_mayor_1,49569,2019,wichita city,Mayor,Kansas,0,389877,12.714009803091745
+2360545_2019_11_portland_ME_Mayor_mayor_1,16902,2019,portland city,Mayor,Maine,1,66595,25.38028380509047
+2545000_2019_11_new bedford_MA_Mayor_mayor_1,9261,2019,new bedford city,Mayor,Massachusetts,0,95239,9.723957622402587
+2634000_2019_11_grand rapids_MI_Mayor_mayor_1,28193,2019,grand rapids city,Mayor,Michigan,1,198401,14.210109828075462
+2670040_2019_11_royal oak_MI_Mayor_mayor_1,12954,2019,royal oak city,Mayor,Michigan,1,59195,21.88360503420897
+2757220_2019_11_st. louis park_MN_Mayor_mayor_1,6524,2019,st. louis park city,Mayor,Minnesota,1,48677,13.402633687367752
+2915670_2019_4_columbia_MO_Mayor_mayor_1,16091,2019,columbia city,Mayor,Missouri,1,121230,13.273117215210755
+3757500_2019_11_rocky mount_NC_Mayor_mayor_1,9861,2019,rocky mount city,Mayor,North Carolina,1,54548,18.077656376035787
+3774440_2019_11_wilmington_NC_Mayor_mayor_1,14924,2019,wilmington city,Mayor,North Carolina,1,120194,12.416593174368105
+3925256_2019_11_elyria_OH_Mayor_mayor_1,8075,2019,elyria city,Mayor,Ohio,0,53821,15.003437320005203
+4263624_2019_11_reading_PA_Mayor_mayor_1,8103,2019,reading city,Mayor,Pennsylvania,0,88232,9.18374285973343
+455000_2019_3_phoenix_AZ_Mayor_mayor_1,142134,2019,phoenix city,Mayor,Arizona,1,1633017,8.703767321466954
+4550875_2019_11_north charleston_SC_Mayor_mayor_1,12017,2019,north charleston city,Mayor,South Carolina,0,111501,10.777481816306581
+4748000_2019_10_memphis_TN_Mayor_mayor_1,96291,2019,memphis city,Mayor,Tennessee,0,651932,14.770098721952596
+4803000_2019_5_amarillo_TX_Mayor_mayor_1,16733,2019,amarillo city,Mayor,Texas,1,198955,8.410444572893368
+4848072_2019_11_midland_TX_Mayor_mayor_1,21457,2019,midland city,Mayor,Texas,1,138549,15.486939638683786
+636770_2019_4_irvine_CA_Mayor_mayor_1,1,2019,irvine city,Mayor,California,1,273157,3.660898311227609e-4
+843000_2019_11_lakewood_CO_Mayor_mayor_1,44337,2019,lakewood city,Mayor,Colorado,1,155146,28.577597875549483
+877290_2019_11_thornton_CO_Mayor_mayor_1,27091,2019,thornton city,Mayor,Colorado,1,136868,19.79352368705614
+908000_2019_11_bridgeport_CT_Mayor_mayor_1,15997,2019,bridgeport city,Mayor,Connecticut,0,145639,10.984008404342244
+908420_2019_11_bristol_CT_Mayor_mayor_1,11911,2019,bristol city,Mayor,Connecticut,0,60218,19.77980005978279
+937000_2019_11_hartford_CT_Mayor_mayor_1,9986,2019,hartford city,Mayor,Connecticut,0,123088,8.112894839464447
+952000_2019_11_new haven_CT_Mayor_mayor_1,17430,2019,new haven city,Mayor,Connecticut,1,130331,13.3736409603241
+980000_2019_11_waterbury_CT_Mayor_mayor_1,10890,2019,waterbury city,Mayor,Connecticut,0,108276,10.057630499833758
+1840788_2019_11_lafayette_IN_City Council_synthetic at-large d_1,10466,2019,lafayette city,City Council,Indiana,0,72581,14.41975172565823
+2537490_2019_11_lynn_MA_City Council_synthetic at-large d_4,26043,2019,lynn city,City Council,Massachusetts,1,93743,27.781274335150357
+2545000_2019_11_new bedford_MA_City Council_synthetic at-large d_5,36417,2019,new bedford city,City Council,Massachusetts,0,95239,38.237486743875934
+2757220_2019_11_st. louis park_MN_City Council_synthetic at-large d_1,12007,2019,st. louis park city,City Council,Minnesota,1,48677,24.666680362388806
+3774440_2019_11_wilmington_NC_City Council_synthetic at-large d_3,38469,2019,wilmington city,City Council,North Carolina,1,120194,32.005757358936386
+937000_2019_11_hartford_CT_City Council_synthetic at-large d_9,46016,2019,hartford city,City Council,Connecticut,0,123088,37.384635382815546
+1938595_2020_1_iowa city_IA_Mayor_mayor_1,7,2020,iowa city city,Mayor,Iowa,1,75849,0.009228862608603937
+2708794_2020_11_burnsville_MN_Mayor_mayor_1,30863,2020,burnsville city,Mayor,Minnesota,1,61536,50.15438117524701
+423620_2020_11_flagstaff_AZ_Mayor_mayor_1,32024,2020,flagstaff city,Mayor,Arizona,1,73319,43.67762789999863
+427820_2020_8_glendale_AZ_Mayor_mayor_1,37761,2020,glendale city,Mayor,Arizona,1,250290,15.086899196931558
+4419180_2020_11_cranston_RI_Mayor_mayor_1,39986,2020,cranston city,Mayor,Rhode Island,0,81252,49.21232708117954
+455000_2020_11_phoenix_AZ_Mayor_mayor_1,575129,2020,phoenix city,Mayor,Arizona,1,1658422,34.67929151928762
+4824000_2020_12_el paso_TX_Mayor_mayor_1,54290,2020,el paso city,Mayor,Texas,1,679879,7.985244433200614
+4845000_2020_11_lubbock_TX_Mayor_mayor_1,87636,2020,lubbock city,Mayor,Texas,1,257013,34.097886099146734
+4856348_2020_11_pearland_TX_Mayor_mayor_1,50286,2020,pearland city,Mayor,Texas,1,125817,39.967571949736524
+5157000_2020_5_norfolk_VA_Mayor_mayor_1,12254,2020,norfolk city,Mayor,Virginia,1,244300,5.015963978714695
+535710_2020_11_jonesboro_AR_Mayor_mayor_1,25103,2020,jonesboro city,Mayor,Arkansas,0,77391,32.43658823377395
+550450_2020_12_north little rock_AR_Mayor_mayor_1,10653,2020,north little rock city,Mayor,Arkansas,0,66079,16.12161200986698
+602252_2020_11_antioch_CA_Mayor_mayor_1,44539,2020,antioch city,Mayor,California,1,111468,39.95675889044389
+622230_2020_11_el monte_CA_Mayor_mayor_1,26531,2020,el monte city,Mayor,California,1,113917,23.289763599813902
+622678_2020_11_encinitas_CA_Mayor_mayor_1,38117,2020,encinitas city,Mayor,California,1,62967,60.53488335159687
+629504_2020_11_gilroy_CA_Mayor_mayor_1,23302,2020,gilroy city,Mayor,California,1,55227,42.19313017183624
+636770_2020_11_irvine_CA_Mayor_mayor_1,118380,2020,irvine city,Mayor,California,1,272694,43.41129617813373
+646898_2020_11_merced_CA_Mayor_mayor_1,27236,2020,merced city,Mayor,California,1,84081,32.392573827618605
+648354_2020_11_modesto_CA_Mayor_mayor_1,83733,2020,modesto city,Mayor,California,1,214485,39.03909364291209
+650258_2020_11_napa_CA_Mayor_mayor_1,39613,2020,napa city,Mayor,California,1,78294,50.59519247962807
+655156_2020_11_palmdale_CA_Mayor_mayor_1,57417,2020,palmdale city,Mayor,California,1,153240,37.46867658574784
+658072_2020_11_pomona_CA_Mayor_mayor_1,45739,2020,pomona city,Mayor,California,1,151124,30.265874381302773
+660466_2020_11_rialto_CA_Mayor_mayor_1,33017,2020,rialto city,Mayor,California,1,103549,31.885387594279035
+669000_2020_11_santa ana_CA_Mayor_mayor_1,89205,2020,santa ana city,Mayor,California,1,332610,26.819698746279425
+677000_2020_11_sunnyvale_CA_Mayor_mayor_1,51139,2020,sunnyvale city,Mayor,California,1,152569,33.51860469689124
+681554_2020_11_vacaville_CA_Mayor_mayor_1,51182,2020,vacaville city,Mayor,California,1,99958,51.20350547229836
+681666_2020_NA_vallejo_CA_Mayor_mayor_1,1,2020,vallejo city,Mayor,California,1,121275,8.245722531436818e-4
+685292_2020_3_whittier_CA_Mayor_mayor_1,20758,2020,whittier city,Mayor,California,1,84821,24.47271312528737
+2708794_2020_11_burnsville_MN_City Council_synthetic at-large a_2,38790,2020,burnsville city,City Council,Minnesota,1,61536,63.03627145085804
+2735180_2020_11_lakeville_MN_City Council_synthetic at-large a_2,54936,2020,lakeville city,City Council,Minnesota,0,65710,83.60371328564906
+622230_2020_11_el monte_CA_City Council_synthetic at-large a_2,40777,2020,el monte city,City Council,California,1,113917,35.79535977948857
+629504_2020_11_gilroy_CA_City Council_synthetic at-large a_3,50912,2020,gilroy city,City Council,California,1,55227,92.18679269198037
+652526_2020_3_norwalk_CA_City Council_synthetic at-large a_3,33954,2020,norwalk city,City Council,California,1,104524,32.48440549538862
+657456_2020_11_pittsburg_CA_City Council_synthetic at-large a_2,44345,2020,pittsburg city,City Council,California,1,71723,61.828144388829244
+659920_2020_11_redding_CA_City Council_synthetic at-large a_2,75567,2020,redding city,City Council,California,1,92025,82.1157294213529
+660466_2020_11_rialto_CA_City Council_synthetic at-large a_2,50843,2020,rialto city,City Council,California,1,103549,49.10042588532965
+1217100_2021_3_delray beach_FL_Mayor_mayor_1,7393,2021,delray beach city,Mayor,Florida,1,66434,11.128337899268447
+1230000_2021_11_hialeah_FL_Mayor_mayor_1,22155,2021,hialeah city,Mayor,Florida,0,224362,9.874666833064422
+1245000_2021_11_miami_FL_Mayor_mayor_1,27330,2021,miami city,Mayor,Florida,1,440807,6.199992286873847
+1756640_2021_4_orland park_IL_Mayor_mayor_1,13805,2021,orland park village,Mayor,Illinois,1,58622,23.54917948892907
+2053775_2021_11_overland park_KS_Mayor_mayor_1,39773,2021,overland park city,Mayor,Kansas,1,195249,20.37039882406568
+2071000_2021_11_topeka_KS_Mayor_mayor_1,15342,2021,topeka city,Mayor,Kansas,1,126802,12.099178246399898
+2208920_2021_3_bossier city_LA_Mayor_mayor_1,8226,2021,bossier city city,Mayor,Louisiana,0,63168,13.022416413373861
+2537490_2021_11_lynn_MA_Mayor_mayor_1,12542,2021,lynn city,Mayor,Massachusetts,1,100233,12.512845070984605
+2670040_2021_11_royal oak_MI_Mayor_mayor_1,14628,2021,royal oak city,Mayor,Michigan,1,58368,25.06167763157895
+2674900_2021_11_southfield_MI_Mayor_mayor_1,15601,2021,southfield city,Mayor,Michigan,1,76196,20.474828074964567
+2686000_2021_11_westland_MI_Mayor_mayor_1,12071,2021,westland city,Mayor,Michigan,0,84961,14.207695295488518
+2965126_2021_11_st. peters_MO_Mayor_mayor_1,2302,2021,st. peters city,Mayor,Missouri,1,57289,4.018223393670687
+3915000_2021_11_cincinnati_OH_Mayor_mayor_1,52460,2021,cincinnati city,Mayor,Ohio,1,308664,16.995827177772593
+4714000_2021_4_chattanooga_TN_Mayor_mayor_1,26631,2021,chattanooga city,Mayor,Tennessee,0,180353,14.766042150671183
+648354_2021_2_modesto_CA_Mayor_mayor_1,33760,2021,modesto city,Mayor,California,1,217728,15.505584950029395
+908420_2021_11_bristol_CT_Mayor_mayor_1,13241,2021,bristol city,Mayor,Connecticut,0,60733,21.801985740865756
+952000_2021_11_new haven_CT_Mayor_mayor_1,12621,2021,new haven city,Mayor,Connecticut,1,133874,9.42752140072008

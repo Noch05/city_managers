@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+
+
+
+<title>Municipal Governance and Voter Turnout: Analyzing the Impacts of City Managers</title>
+
+
+
+
+
+
+<style>
+@page {
+size: 48in 42in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 40px;
+width: 48in;
+height: 42in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 48in;
+height: 42in;
+padding: 0cm;
+}
+.title_container {
+width: 48in;
+height: calc(42in * 0.15);
+overflow: hidden;
+background-color: #036969;
+border: 0 solid #0b4545;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #036969;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #036969;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #2874f7;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #2874f7;
+}
+
+/* mouse over link */
+a:hover {
+color: #2874f7;
+}
+
+/* selected link */
+a:active {
+color: #2874f7;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #036969;
+-moz-column-rule-color: #036969;
+column-rule-color: #036969;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(48in + 0 + 0);
+height: calc(42in * 0.83);
+padding-top: calc(42in * 0.005);
+padding-bottom: calc(42in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 70pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #036969;
+background-color: #036969;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00808024;
+color: #036969;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'SPA-90th.jpg' style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Municipal Governance and Voter Turnout: Analyzing the Impacts of City Managers</h1>
+<h3 id="author">Noah Ochital<sup>1</sup></h3><br>
+<h5 id="affiliation"><sup>1</sup> American University, <a href="mailto:no9857a@american.edu" class="email">no9857a@american.edu</a></h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=au_logo.png style="width: 80%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Municipal elections in the United States have consistently garnered less turnout than federal elections <span class="citation">(Morlan 1984; Bullock III 1990; Alford and Lee 1968)</span>. This trend is particularly confusing given that municipalities oversee a variety of services, such as sanitation, public safety, zoning, and utilities, which arguably have more daily impact than federal or state legislation. While researchers have proposed many factors why this is the case, this analysis narrows the focus to examine one factor: the presence or lack of a city manager.</p>
+<p>City managers are appointed officials with wide-reaching powers and responsibilities, such as discretion over the budget, policy, and administration of a municipality. In cities with managers, elected officials have less responsibility and policy-setting power, while in cities without managers, elected officials are required to step up to the plate and govern effectively. Given this power dichotomy, it would be reasonable to assume that municipal managers would have a chilling effect on turnout, because many of the important decisions made by the municipality will be unchanged no matter who is in office <span class="citation">(Alford and Lee 1968; Hajnal and Lewis 2003)</span>. If this relationship is true, it provides a simple and effective way to increase voter turnout where it has waned the most. The goal of this analysis is to establish the veracity of this relationship, estimate the impact of city managers, and update existing literature on the subject.</p>
+<p>The earliest research on the subject, documents a clear negative association between city managers and turnout using data from as early as 1935 to estimate correlations. <span class="citation">(Alford and Lee 1968; Karnig and Walter 1983)</span>. More recent research has leveraged more advanced techniques and original data collection to include many more factors such as election concurrency, facets of mayoral power (budget, veto, term limits, etc.), and control for demographic factors <span class="citation">(Wood 2002; Hajnal and Lewis 2003; Caren 2007)</span>. However, these new studies still suffer from lack of data, with small sample sizes <span class="citation">(Wood 2002; Caren 2007)</span> or data from only a single state <span class="citation">(Hajnal and Lewis 2003)</span> reducing interpretations of the results.</p>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<p>Making up for prior limitations, I’ve leveraged a new municipal electoral database from Benedictis-Kessner and colleagues <span class="citation">(Benedictis-Kessner et al. 2023)</span>, combining it with census data <span class="citation">(Bureau 2022)</span> and some original data collection to create a data set with turnout rate, government type, incumbent presence, margin of victory, demographic factors, concurrency factors, and election type. Timing constraints forced me to choose a random sample of 150 from 1000 cities, which after processing resulted in 396 elections in 90 incorporated municipalities which was used to estimate the following regression model:
+<span class="math display">\[\begin{multline*}
+\text{Turnout}_i = \beta_0 + \beta_1 (\text{Manager}_i) + \beta_2 (\text{Concurrency}_i) +\\
+\beta_3 (\text{Mayoral Government}_i) + \beta_4 (\text{Office of Election}_i) +\\
+\beta_5 (\text{Incumbent Present}_i) + \beta_6 (\text{Margin of Victory}_i) +\\
+\beta_7 (\text{Percent Women}_i) + \beta_8 (\text{Percent Black}_i) +\\
+\beta_9 (\text{Percent Hispanic}_i) + \beta_{10} (\text{Percent Asian American}_i) + \epsilon_i
+\end{multline*}\]</span>
+However, in addition to accounting for all these factors, I also performed propensity score matching using the <code>MatchIt</code> and <code>Cobalt</code> packages with the above covariates <span class="citation">(D. Ho et al. 2024)</span>, to clarify the coefficients in the analysis as demonstrated by prior research<span class="citation">(D. E. Ho et al. 2007)</span>. After testing all forms of the procedure the best performing, as per the author’s recommendation <span class="citation">(Greifer 2024b)</span>, was the optimal matching algorithm that minimized the sum of differences of propensity score pairs, and a logistic regression for estimating propensity scores, resulting in 97 pairs of 194 observations
+<span class="math display">\[\begin{multline*}
+\text{argmin} \sum\limits_{i=1}^{\min(C,T)} \left| P_{Ci} - P_{Ti} \right|\\
+\end{multline*}\]</span></p>
+<p><span class="math display">\[\begin{multline*}
+P(\text{Has a Manager}_i = 1 \mid X_{1i}, \dots, X_{10i}) =
+\frac{1}{1 + e^{-( \beta_0 + \beta_1 X_{1i} + \cdots + \beta_{10} X_{10i})+\epsilon_i}}\\
+\end{multline*}\]</span>
+The results of the procedure are summarized on the right:</p>
+<div class="figure"><span style="display:block;" id="fig:fig-bal"></span>
+<img src="NCUR_Poster_files/figure-html/fig-bal-1.png" alt="Individual Distributional Balance for Matched Covariates" width="1500" />
+<p class="caption">
+Figure 1: Individual Distributional Balance for Matched Covariates
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig-love"></span>
+<img src="NCUR_Poster_files/figure-html/fig-love-1.png" alt="Love Plot for Matched Covariates" width="1500" />
+<p class="caption">
+Figure 2: Love Plot for Matched Covariates
+</p>
+</div>
+<div id="section" class="section level17">
+<p class="heading"></p>
+</div>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<table style="text-align:center">
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+Voter Turnout
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>OLS</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+Unmatched
+</td>
+<td>
+Matched
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Manager
+</td>
+<td>
+-3.55<sup>*</sup> (-6.56, -0.55)
+</td>
+<td>
+-2.54 (-5.23, 0.16)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Midterm Concurrency
+</td>
+<td>
+24.88<sup>*</sup> (21.70, 28.06)
+</td>
+<td>
+24.06<sup>*</sup> (19.58, 28.53)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+President Concurrency
+</td>
+<td>
+35.06<sup>*</sup> (31.87, 38.26)
+</td>
+<td>
+30.38<sup>*</sup> (24.79, 35.97)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Has a Mayor
+</td>
+<td>
+-5.75<sup>*</sup> (-10.50, -1.00)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Mayoral Election
+</td>
+<td>
+-13.48<sup>*</sup> (-16.60, -10.37)
+</td>
+<td>
+-17.89<sup>*</sup> (-22.27, -13.51)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Incumbent Presence
+</td>
+<td>
+2.86<sup>*</sup> (0.34, 5.37)
+</td>
+<td>
+2.40 (-0.49, 5.29)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Margin of Victory
+</td>
+<td>
+-0.18<sup>*</sup> (-0.22, -0.14)
+</td>
+<td>
+-0.15<sup>*</sup> (-0.19, -0.10)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Percent Women
+</td>
+<td>
+0.98 (-0.05, 2.01)
+</td>
+<td>
+0.46 (-0.76, 1.69)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Percent Black
+</td>
+<td>
+-0.12<sup>*</sup> (-0.21, -0.04)
+</td>
+<td>
+-0.06 (-0.14, 0.03)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Population(ln)
+</td>
+<td>
+0.18 (-1.63, 2.00)
+</td>
+<td>
+0.58 (-1.42, 2.58)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Percent Hispanic
+</td>
+<td>
+-0.23<sup>*</sup> (-0.29, -0.18)
+</td>
+<td>
+-0.17<sup>*</sup> (-0.24, -0.10)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Percent Asian
+</td>
+<td>
+-0.21<sup>*</sup> (-0.33, -0.09)
+</td>
+<td>
+0.40 (-0.28, 1.08)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+-1.84 (-61.44, 57.77)
+</td>
+<td>
+12.20 (-58.11, 82.51)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+396
+</td>
+<td>
+194
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.73
+</td>
+<td>
+0.73
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+87.16<sup>*</sup> (df = 12; 383)
+</td>
+<td>
+43.66<sup>*</sup> (df = 11; 182)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+*p&lt;0.05, 95% CI in parentheses
+</td>
+</tr>
+</table>
+</div>
+<div id="discussion" class="section level1">
+<h1>Discussion</h1>
+<p>Overall, the regression shows a clear negative association between city managers and turnout, although on the matched sample the loss in sample size, may have increased the variance of the coefficient estimate, it could also be that the clarified coefficient is not significant. However, the relatively small size of the coefficient related to other factors, means that municipalities should look more readily to other electoral changes instead of removing their manager. Given the lack of significance, it may be worth revisiting the typical notion surrounding city managers reducing turnout, especially if their professional managing can provide better outcomes for residents. This analysis, still suffers from many issues, and future research should address performing a similar analysis on larger data sets that are more diverse and representative.</p>
+</div>
+<div id="acknlowlegdements" class="section level1">
+<h1>Acknlowlegdements</h1>
+<p>Thank you to Professor Ryan Moore of American University for guidance and support with the project. Thanks also goes out to the creators of <code>MatchIt</code><span class="citation">(D. Ho et al. 2024)</span>, <code>Cobalt</code> <span class="citation">(Greifer 2024a)</span>, <code>Tidyverse</code> <span class="citation">(Wickham et al. 2019)</span> , <code>R 4.4.1</code> <span class="citation">(R. C. Team 2024)</span>, <code>stargazer</code> <span class="citation">(Hlavac 2022)</span>, <code>gridExtra</code> <span class="citation">(Auguie and Antonov 2017)</span>, and <code>Rstudio</code> <span class="citation">(P. Team 2024)</span> for creating the software to make this analysis possible.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<font size="2.5">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-alford_voting_1968" class="csl-entry">
+Alford, Robert R., and Eugene C. Lee. 1968. <span>“Voting <span>Turnout</span> in <span>American</span> <span>Cities</span>.”</span> <em>The American Political Science Review</em> 62 (3): 796–813. <a href="https://doi.org/10.2307/1953431">https://doi.org/10.2307/1953431</a>.
+</div>
+<div id="ref-auguie_gridextra_2017" class="csl-entry">
+Auguie, Baptiste, and Anton Antonov. 2017. <span>“<span class="nocase">gridExtra</span>: <span>Miscellaneous</span> <span>Functions</span> for "<span>Grid</span>" <span>Graphics</span>.”</span> <a href="https://cran.r-project.org/web/packages/gridExtra/index.html">https://cran.r-project.org/web/packages/gridExtra/index.html</a>.
+</div>
+<div id="ref-benedictis-kessner_american_2023" class="csl-entry">
+Benedictis-Kessner, Justin de, Diana Da In Lee, Yamil Velez, and Christopher Warshaw. 2023. <span>“American <span>Local</span> <span>Government</span> <span>Elections</span> <span>Database</span>,”</span> April. <a href="https://doi.org/10.17605/OSF.IO/MV5E6">https://doi.org/10.17605/OSF.IO/MV5E6</a>.
+</div>
+<div id="ref-bullock_iii_turnout_1990" class="csl-entry">
+Bullock III, Charles S. 1990. <span>“Turnout in <span>Municipal</span> <span>Elections</span>.”</span> <em>Review of Policy Research</em> 9 (3): 539–49. <a href="https://doi.org/10.1111/j.1541-1338.1990.tb01061.x">https://doi.org/10.1111/j.1541-1338.1990.tb01061.x</a>.
+</div>
+<div id="ref-us_census_bureau_total_2022" class="csl-entry">
+Bureau, U. S. Census. 2022. <span>“Total <span>Population</span>, <span>Amerian</span> <span>Community</span> <span>Survey</span>, <span>ACS</span> 5-<span>Year</span> <span>Estimates</span> <span>Detailed</span> <span>Tables</span>, <span>Table</span> <span>B01003</span>, 2010-2022.”</span> <a href="https://data.census.gov/table/ACSDT5Y2022.B01003?q=Population&amp;t=Counts, Estimates, and Projections:Population Total&amp;g=010XX00US$1600000&amp;tp=true.">https://data.census.gov/table/ACSDT5Y2022.B01003?q=Population&amp;t=Counts, Estimates, and Projections:Population Total&amp;g=010XX00US$1600000&amp;tp=true.</a>
+</div>
+<div id="ref-caren_big_2007" class="csl-entry">
+Caren, Neal. 2007. <span>“Big <span>City</span>, <span>Big</span> <span>Turnout</span>? <span>Electoral</span> <span>Participation</span> in <span>American</span> <span>Cities</span>.”</span> <em>Journal of Urban Affairs</em> 29 (1): 31–46. <a href="https://doi.org/10.1111/j.1467-9906.2007.00321.x">https://doi.org/10.1111/j.1467-9906.2007.00321.x</a>.
+</div>
+<div id="ref-greifer_cobalt_2024" class="csl-entry">
+Greifer, Noah. 2024a. <span>“Cobalt: <span>Covariate</span> <span>Balance</span> <span>Tables</span> and <span>Plots</span>.”</span> <a href="https://cran.r-project.org/web/packages/cobalt/index.html">https://cran.r-project.org/web/packages/cobalt/index.html</a>.
+</div>
+<div id="ref-greifer_matchit_2024" class="csl-entry">
+———. 2024b. <span>“<span>MatchIt</span>: <span>Getting</span> <span>Started</span>.”</span> <a href="https://cran.r-project.org/web/packages/MatchIt/vignettes/MatchIt.html">https://cran.r-project.org/web/packages/MatchIt/vignettes/MatchIt.html</a>.
+</div>
+<div id="ref-hajnal_municipal_2003" class="csl-entry">
+Hajnal, Zoltan L., and Paul G. Lewis. 2003. <span>“Municipal <span>Institutions</span> and <span>Voter</span> <span>Turnout</span> in <span>Local</span> <span>Elections</span>.”</span> <em>Urban Affairs Review</em> 38 (5): 645–68. <a href="https://doi.org/10.1177/1078087403038005002">https://doi.org/10.1177/1078087403038005002</a>.
+</div>
+<div id="ref-hlavac_stargazer_2022" class="csl-entry">
+Hlavac, Marek. 2022. <span>“Stargazer: Beautiful <span>LATEX</span>, <span>HTML</span> and <span>ASCII</span> Tables from <span>R</span> Statistical Output.”</span>
+</div>
+<div id="ref-ho_matching_2007" class="csl-entry">
+Ho, Daniel E., Kosuke Imai, Gary King, and Elizabeth A. Stuart. 2007. <span>“Matching as <span>Nonparametric</span> <span>Preprocessing</span> for <span>Reducing</span> <span>Model</span> <span>Dependence</span> in <span>Parametric</span> <span>Causal</span> <span>Inference</span>.”</span> <em>Political Analysis</em> 15 (3): 199–236. <a href="https://doi.org/10.1093/pan/mpl013">https://doi.org/10.1093/pan/mpl013</a>.
+</div>
+<div id="ref-ho_matchit_2024" class="csl-entry">
+Ho, Daniel, Kosuke Imai, Gary King, Elizabeth Stuart, Alex Whitworth, and Noah Greifer. 2024. <span>“<span>MatchIt</span>: <span>Nonparametric</span> <span>Preprocessing</span> for <span>Parametric</span> <span>Causal</span> <span>Inference</span>.”</span> <a href="https://cran.r-project.org/web/packages/MatchIt/index.html">https://cran.r-project.org/web/packages/MatchIt/index.html</a>.
+</div>
+<div id="ref-karnig_decline_1983" class="csl-entry">
+Karnig, Albert K., and B. Oliver Walter. 1983. <span>“Decline in <span>Municipal</span> <span>Voter</span> <span>Turnout</span>: <span>A</span> <span>Function</span> of <span>Changing</span> <span>Structure</span>.”</span> <em>American Politics Quarterly</em> 11 (4): 491–505. <a href="https://doi.org/10.1177/004478083011004006">https://doi.org/10.1177/004478083011004006</a>.
+</div>
+<div id="ref-morlan_municipal_1984" class="csl-entry">
+Morlan, Robert L. 1984. <span>“Municipal Vs. <span>National</span> <span>Election</span> <span>Voter</span> <span>Turnout</span>: <span>Europe</span> and the <span>United</span> <span>States</span>.”</span> <em>Political Science Quarterly</em> 99 (3): 457–70. <a href="https://doi.org/10.2307/2149943">https://doi.org/10.2307/2149943</a>.
+</div>
+<div id="ref-posit_team_rstudio_2024" class="csl-entry">
+Team, Posit. 2024. <span>“<span>RStudio</span>: <span>Integrated</span> <span>Develpment</span> <span>Environment</span> for <span>R</span>.”</span> Boston. Ma: Poist Software, PBC. <a href="http://www.posit.co/">http://www.posit.co/</a>.
+</div>
+<div id="ref-r_core_team_r_2024" class="csl-entry">
+Team, R Core. 2024. <span>“R: <span>A</span> <span>Language</span> and <span>Environment</span> for <span>Statistical</span> <span>Computing</span>.”</span> Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.r-project.org/">https://www.r-project.org/</a>.
+</div>
+<div id="ref-wickham_welcome_2019" class="csl-entry">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome to the <span>Tidyverse</span>.”</span> <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
+</div>
+<div id="ref-wood_voter_2002" class="csl-entry">
+Wood, Curtis. 2002. <span>“Voter <span>Turnout</span> in <span>City</span> <span>Elections</span>.”</span> <em>Urban Affairs Review</em> 38 (2): 209–31. <a href="https://doi.org/10.1177/107808702237659">https://doi.org/10.1177/107808702237659</a>.
+</div>
+</div>
+<p></font></p>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+var script = document.createElement("script");
+script.type = "text/javascript";
+var src = "true";
+if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+if (location.protocol !== "file:" && /^https?:/.test(src))
+src = src.replace(/^https?:/, '');
+script.src = src;
+document.getElementsByTagName("head")[0].appendChild(script);
+})();
+</script>
+
+
+</body>
+</html>

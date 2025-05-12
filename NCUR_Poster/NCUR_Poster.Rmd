@@ -1,0 +1,208 @@
+---
+title: "Municipal Governance and Voter Turnout: Analyzing the Impacts of City Managers"
+author:
+  - name: Noah Ochital
+    affil: 1
+affiliation:
+  - num: 1
+    address: American University, no9857a@american.edu
+logoright_name: "au_logo.png"
+logoleft_name: "SPA-90th.jpg"
+output: 
+  posterdown::posterdown_html:
+    self_contained: FALSE
+column_numbers: 3
+author_textsize: "70pt"
+poster_height: "42in"
+poster_width: "48in"
+bibliography: ref_govt_310.bib
+primary_colour: "#036969"
+accent_colour: "#2874f7"
+body_textsize: "40px"
+
+
+
+
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+```{r}
+#| output: FALSE
+#| message: FALSE
+#| warning: FALSE
+library(tidyverse)
+library(tidymodels)
+library(stargazer)
+library(MatchIt)
+library(cobalt)
+library(gridExtra)
+library(grid)
+library(maps)
+final_contests <- read_rds("final_contests.rds")
+matched_data <- read_rds("matched_data.rds")
+optimal_glm <- read_rds("matched_model.rds")
+```
+
+```{r output = FALSE}
+final_balances <- bal.tab(optimal_glm, stats = c("mean.diffs", "variance.ratios"), 
+                         binary = "std", thresholds = c(m=0.1, v=2), un = TRUE)
+bal_names <- list("Propensity Score", "Not Concurrent", "Concurrent With Midterm",
+                        "Concurrent with President", "Has a Mayor",
+                        "Mayoral Election", "Population (ln)",
+                        "Incumbent Prescence", "Margin of Victory", "Women (%)",
+                        "Black (%)", "Hispanic (%)", "Asian (%)")
+names(bal_names) <- var.names(final_balances)
+```
+
+
+
+
+```{r output = FALSE}
+lm_ref <- lm(turnout ~ council.manager, final_contests)
+lm_full <- lm(turnout ~ council.manager + concurrent + has_mayor + office +
+                incumbent + margin + percent_women + percent_black + log.pop + 
+                percent_hispanic + percent_asian_american, data = final_contests)
+
+lm_ref_matched <- lm(turnout ~ council.manager, data = matched_data, weights = weights)
+lm_full_matched <- lm(turnout ~ council.manager + concurrent+ office + 
+                        has_mayor + incumbent + margin + log.pop + 
+                        percent_women + percent_black + percent_hispanic +
+                percent_asian_american, data = matched_data, weights = weights)
+
+models <- list(lm_ref,lm_full, lm_ref_matched, lm_full_matched)
+p.values <- vector()
+
+for (i in seq_along(models)) {
+  tidied <- tidy(models[[i]])  %>% filter(term == "council.manager") %>% select(p.value)
+  p.values[i] <- as.vector(tidied)
+}
+adjusted <- p.adjust(p.values, method = "BH")
+```
+
+# Introduction
+
+Municipal elections in the United States have consistently garnered less turnout than federal elections [@morlan_municipal_1984; @bullock_iii_turnout_1990; @alford_voting_1968]. This trend is particularly confusing given that municipalities oversee a variety of services, such as sanitation, public safety, zoning, and utilities, which arguably have more daily impact than federal or state legislation. While researchers have proposed many factors why this is the case, this analysis narrows the focus to examine one factor: the presence or lack of a city manager. 
+
+City managers are appointed officials with wide-reaching powers and responsibilities, such as discretion over the budget, policy, and administration of a municipality. In cities with managers, elected officials have less responsibility and policy-setting power, while in cities without managers, elected officials are required to step up to the plate and govern effectively. Given this power dichotomy, it would be reasonable to assume that municipal managers would have a chilling effect on turnout, because many of the important decisions made by the municipality will be unchanged no matter who is in office [@alford_voting_1968; @hajnal_municipal_2003]. If this relationship is true, it provides a simple and effective way to increase voter turnout where it has waned the most. The goal of this analysis is to establish the veracity of this relationship, estimate the impact of city managers, and update existing literature on the subject.
+
+The earliest research on the subject, documents a clear negative association between city managers and turnout using data from as early as 1935 to estimate correlations. [@alford_voting_1968; @karnig_decline_1983]. More recent research has leveraged more advanced techniques and original data collection to include many more factors such as election concurrency, facets of mayoral power (budget, veto, term limits, etc.), and control for demographic factors [@wood_voter_2002; @hajnal_municipal_2003; @caren_big_2007]. However, these new studies still suffer from lack of data, with small sample sizes [@wood_voter_2002; @caren_big_2007] or data from only a single state [@hajnal_municipal_2003] reducing interpretations of the results.
+
+# Methods
+
+Making up for prior limitations, I've leveraged a new municipal electoral database from Benedictis-Kessner and colleagues [@benedictis-kessner_american_2023], combining it with census data [@us_census_bureau_total_2022] and some original data collection to create a data set with turnout rate, government type, incumbent presence, margin of victory, demographic factors, concurrency factors, and election type. Timing constraints forced me to choose a random sample of 150 from 1000 cities, which after processing resulted in `r nrow(final_contests)` elections in `r length(unique(final_contests$city))` incorporated municipalities which was used to estimate the following regression model:
+\begin{multline*}
+\text{Turnout}_i = \beta_0 + \beta_1 (\text{Manager}_i) + \beta_2 (\text{Concurrency}_i) +\\
+\beta_3 (\text{Mayoral Government}_i) + \beta_4 (\text{Office of Election}_i) +\\
+\beta_5 (\text{Incumbent Present}_i) + \beta_6 (\text{Margin of Victory}_i) +\\
+\beta_7 (\text{Percent Women}_i) + \beta_8 (\text{Percent Black}_i) +\\
+\beta_9 (\text{Percent Hispanic}_i) + \beta_{10} (\text{Percent Asian American}_i) + \epsilon_i
+\end{multline*}
+However, in addition to accounting for all these factors, I also performed propensity score matching using the `MatchIt` and `Cobalt` packages with the above covariates [@ho_matchit_2024], to clarify the coefficients in the analysis as demonstrated by prior research[@ho_matching_2007]. After testing all forms of the procedure the best performing, as per the author's recommendation [@greifer_matchit_2024], was the optimal matching algorithm that minimized the sum of differences of propensity score pairs, and a logistic regression for estimating propensity scores, resulting in 97 pairs of 194 observations 
+\begin{multline*}
+\text{argmin} \sum\limits_{i=1}^{\min(C,T)} \left| P_{Ci} - P_{Ti} \right|\\
+\end{multline*}
+
+\begin{multline*}
+P(\text{Has a Manager}_i = 1 \mid X_{1i}, \dots, X_{10i}) = 
+\frac{1}{1 + e^{-( \beta_0 + \beta_1 X_{1i} + \cdots + \beta_{10} X_{10i})+\epsilon_i}}\\
+\end{multline*}
+The results of the procedure are summarized on the right:
+
+```{r}
+#| fig.cap: "Individual Distributional Balance for Matched Covariates"
+#| fig.width: 10
+#| fig.height: 10
+#| fig.dpi: 150
+#| label: fig-bal
+bals <- c("incumbent", "percent_women", "percent_black", "percent_hispanic",
+             "percent_asian_american", "log.pop", "concurrent", 
+          "has_mayor", "distance")
+bal_labs <- c("Incumbent", "Women (%)", "Black (%)", "Hispanic (%)", "Asian (%)", 
+              "Population (ln)", "Election Concurrency", "Has a Mayor",
+              "Propensity Score")
+
+bal_plots <- list()
+
+
+for(i in seq_along(bals)) {
+  bal_plots[[i]] <- bal.plot(optimal_glm, var.name = bals[i], which = "both",
+                             sample.names = c("Unmatched", "Matched"))+
+    ggtitle(NULL) +
+    labs(
+      x = paste(bal_labs[i]), 
+      y = ifelse(
+        bal_labs[i] %in% c("Incumbent", "Election Concurrency", "Has a Mayor"), 
+        "Proportion", 
+        "Density")
+    ) +
+    theme(
+      axis.text.x = element_blank(),
+      axis.text.y = element_blank(),
+      axis.ticks = element_blank()
+    )
+}
+grid.arrange(grobs = bal_plots, nrow = 3)
+```
+```{r}
+#| fig.cap: "Love Plot for Matched Covariates"
+#| fig.width: 10
+#| fig.height: 9
+#| fig.dpi: 150
+#| label: fig-love
+bal_names <- list("Propensity Score", "Not Concurrent", "Concurrent With Midterm",
+                        "Concurrent with President", "Has a Mayor",
+                        "Mayoral Election", "Population (ln)",
+                        "Incumbent Prescence", "Margin of Victory", "Women (%)",
+                        "Black (%)", "Hispanic (%)", "Asian (%)")
+names(bal_names) <- var.names(final_balances)
+
+love <- love.plot(optimal_glm, stats = c("mean.diffs", "variance.ratios"), 
+          binary = "std", thresholds = c(m=0.1, v=2), un = TRUE,
+          var.names = bal_names, title = NULL)
+```
+
+#################
+
+# Results
+<table style="text-align:center"><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="2"><em>Dependent variable:</em></td></tr>
+<tr><td></td><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td colspan="2">Voter Turnout</td></tr>
+<tr><td style="text-align:left"></td><td colspan="2"><em>OLS</em></td></tr>
+<tr><td style="text-align:left"></td><td>Unmatched</td><td>Matched</td></tr>
+<tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Manager</td><td>-3.55<sup>*</sup> (-6.56, -0.55)</td><td>-2.54 (-5.23, 0.16)</td></tr>
+<tr><td style="text-align:left">Midterm Concurrency</td><td>24.88<sup>*</sup> (21.70, 28.06)</td><td>24.06<sup>*</sup> (19.58, 28.53)</td></tr>
+<tr><td style="text-align:left">President Concurrency</td><td>35.06<sup>*</sup> (31.87, 38.26)</td><td>30.38<sup>*</sup> (24.79, 35.97)</td></tr>
+<tr><td style="text-align:left">Has a Mayor</td><td>-5.75<sup>*</sup> (-10.50, -1.00)</td><td></td></tr>
+<tr><td style="text-align:left">Mayoral Election</td><td>-13.48<sup>*</sup> (-16.60, -10.37)</td><td>-17.89<sup>*</sup> (-22.27, -13.51)</td></tr>
+<tr><td style="text-align:left">Incumbent Presence</td><td>2.86<sup>*</sup> (0.34, 5.37)</td><td>2.40 (-0.49, 5.29)</td></tr>
+<tr><td style="text-align:left">Margin of Victory</td><td>-0.18<sup>*</sup> (-0.22, -0.14)</td><td>-0.15<sup>*</sup> (-0.19, -0.10)</td></tr>
+<tr><td style="text-align:left">Percent Women</td><td>0.98 (-0.05, 2.01)</td><td>0.46 (-0.76, 1.69)</td></tr>
+<tr><td style="text-align:left">Percent Black</td><td>-0.12<sup>*</sup> (-0.21, -0.04)</td><td>-0.06 (-0.14, 0.03)</td></tr>
+<tr><td style="text-align:left">Population(ln)</td><td>0.18 (-1.63, 2.00)</td><td>0.58 (-1.42, 2.58)</td></tr>
+<tr><td style="text-align:left">Percent Hispanic</td><td>-0.23<sup>*</sup> (-0.29, -0.18)</td><td>-0.17<sup>*</sup> (-0.24, -0.10)</td></tr>
+<tr><td style="text-align:left">Percent Asian</td><td>-0.21<sup>*</sup> (-0.33, -0.09)</td><td>0.40 (-0.28, 1.08)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>-1.84 (-61.44, 57.77)</td><td>12.20 (-58.11, 82.51)</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>396</td><td>194</td></tr>
+<tr><td style="text-align:left">R<sup>2</sup></td><td>0.73</td><td>0.73</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>87.16<sup>*</sup> (df = 12; 383)</td><td>43.66<sup>*</sup> (df = 11; 182)</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right">*p<0.05, 95% CI in parentheses</td></tr>
+</table>
+
+
+# Discussion
+
+Overall, the regression shows a clear negative association between city managers and turnout, although on the matched sample the loss in sample size, may have increased the variance of the coefficient estimate, it could also be that the clarified coefficient is not significant. However, the relatively small size of the coefficient related to other factors, means that municipalities should look more readily to other electoral changes instead of removing their manager. Given the lack of significance, it may be worth revisiting the typical notion surrounding city managers reducing turnout, especially if their professional managing can provide better outcomes for residents. This analysis, still suffers from many issues, and future research should address performing a similar analysis on larger data sets that are more diverse and representative.
+
+
+
+# Acknlowlegdements
+
+Thank you to Professor Ryan Moore of American University for guidance and support with the project. Thanks also goes out to the creators of `MatchIt`[@ho_matchit_2024], `Cobalt` [@greifer_cobalt_2024], `Tidyverse` [@wickham_welcome_2019] , `R 4.4.1` [@r_core_team_r_2024], `stargazer` [@hlavac_stargazer_2022], `gridExtra` [@auguie_gridextra_2017], and `Rstudio` [@posit_team_rstudio_2024] for creating the software to make this analysis possible.
+
+
+# References
+<font size="2.5"> <div id="refs"></div> </font>

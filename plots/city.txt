@@ -1,0 +1,95 @@
+
+===========================================================================
+                             city                                state     
+---------------------------------------------------------------------------
+1                        amarillo city                           Texas     
+2                       ann arbor city                          Michigan   
+3                        antioch city                          California  
+4                        arcadia city                          California  
+5                       asheville city                       North Carolina
+6  augusta-richmond county consolidated government (balance)    Georgia    
+7                      bloomington city                         Indiana    
+8                      bossier city city                       Louisiana   
+9                       bridgeport city                       Connecticut  
+10                       bristol city                         Connecticut  
+11                      burnsville city                        Minnesota   
+12                     chattanooga city                        Tennessee   
+13                       chicago city                           Illinois   
+14                      cincinnati city                           Ohio     
+15                        colton city                          California  
+16                       columbia city                          Missouri   
+17                       cranston city                        Rhode Island 
+18                        eagan city                           Minnesota   
+19                       el monte city                         California  
+20                       el paso city                            Texas     
+21                        elyria city                             Ohio     
+22                      encinitas city                         California  
+23                      escondido city                         California  
+24                        fargo city                          North Dakota 
+25                      flagstaff city                          Arizona    
+26                         gary city                            Indiana    
+27                        gilroy city                          California  
+28                       glendale city                          Arizona    
+29                     grand rapids city                        Michigan   
+30                       hartford city                        Connecticut  
+31                    hendersonville city                      Tennessee   
+32                       hialeah city                           Florida    
+33                      iowa city city                            Iowa     
+34                        irvine city                          California  
+35                      jonesboro city                          Arkansas   
+36                      lafayette city                          Indiana    
+37                      lakeville city                         Minnesota   
+38                       lakewood city                          Colorado   
+39                     little rock city                         Arkansas   
+40                     los angeles city                        California  
+41                       lubbock city                            Texas     
+42                         lynn city                         Massachusetts 
+43                       memphis city                          Tennessee   
+44                        merced city                          California  
+45                        miami city                            Florida    
+46                       midland city                            Texas     
+47                       modesto city                          California  
+48                        muncie city                           Indiana    
+49                         napa city                           California  
+50                     new bedford city                      Massachusetts 
+51                      new haven city                        Connecticut  
+52                        newark city                          New Jersey  
+53                       norfolk city                           Virginia   
+54                   north charleston city                   South Carolina
+55                  north little rock city                      Arkansas   
+56                       norwalk city                          California  
+57                    orland park village                       Illinois   
+58                    overland park city                         Kansas    
+59                     palm desert city                        California  
+60                       palmdale city                         California  
+61                       pearland city                           Texas     
+62                       petaluma city                         California  
+63                       phoenix city                           Arizona    
+64                      pittsburg city                         California  
+65                        pomona city                          California  
+66                       portland city                           Maine     
+67                      providence city                       Rhode Island 
+68                       reading city                         Pennsylvania 
+69                       redding city                          California  
+70                     redwood city city                       California  
+71                        rialto city                          California  
+72                      royal oak city                          Michigan   
+73                      santa ana city                         California  
+74                     santa clara city                        California  
+75                     santa monica city                       California  
+76                      sioux city city                           Iowa     
+77                        smyrna city                           Georgia    
+78                 south san francisco city                    California  
+79                      southfield city                         Michigan   
+80                    st. louis park city                      Minnesota   
+81                       thornton city                          Colorado   
+82                        topeka city                            Kansas    
+83                      vacaville city                         California  
+84                       vallejo city                          California  
+85                      waterbury city                        Connecticut  
+86                       westland city                          Michigan   
+87                       whittier city                         California  
+88                       wichita city                            Kansas    
+89                      wilmington city                      North Carolina
+90                       woodland city                         California  
+---------------------------------------------------------------------------
