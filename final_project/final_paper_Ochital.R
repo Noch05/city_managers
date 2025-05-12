@@ -189,7 +189,7 @@ rm(pop.2010,pop.2011,pop.2012, pop.2013,pop.2014,pop.2015,pop.2016,
    contest_by_year)
 gc()
 
-write_rds(final_contests, "final_contests.rds")
+write_rds(final_contests, "data/final_contests.rds")
 
 
 
@@ -260,8 +260,8 @@ tie_breaker <- tibble(
 set.seed(125)
 optimal_glm <- matchit(formula, method = "optimal", data = final_contests, distance = "glm")
 matched_data <- match.data(optimal_glm)
-write_rds(matched_data, "matched_data.rds")
-write_rds(optimal_glm, "matched_model.rds")
+write_rds(matched_data, "data/matched_data.rds")
+write_rds(optimal_glm, "data/matched_model.rds")
 
 
 
