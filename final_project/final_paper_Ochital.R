@@ -52,7 +52,7 @@ sampled_contests <- sampled_elections %>%
         100
       }
       else {
-      100*(sorted_votes[1] - sorted_votes[2])/(sorted_votes[1]+sorted_votes[2])
+        100*(sorted_votes[1] - sorted_votes[2])/(sorted_votes[1]+sorted_votes[2])
       }
     }
   ) %>% 
@@ -201,8 +201,8 @@ formula <- council.manager ~ concurrent+ has_mayor+ office+ log.pop+ incumbent +
   margin + percent_women+ percent_black+percent_hispanic+ percent_asian_american
 matching_methods <- c("nearest", "optimal", "full", "quick", "genetic")
 distance_methods <- c("glm", "gam", "gbm", "lasso", "ridge", "elasticnet",
-              "rpart", "randomforest", "nnet", "cbps", 
-              "bart", "mahalanobis", "scaled_euclidean", "robust_mahalanobis")
+                      "rpart", "randomforest", "nnet", "cbps", 
+                      "bart", "mahalanobis", "scaled_euclidean", "robust_mahalanobis")
 balances <- list()
 matching <- function(method, formula, data, cutpoints = NULL, grouping = NULL, 
                      subclass = NULL, distance, distance.options = NULL) {
@@ -221,12 +221,12 @@ for(methods in matching_methods) {
     if(distance == "nnet") {
       set.seed(125)
       balances[[paste(methods, distance, sep = "_")]] <- matching(methods, 
-    formula, final_contests, distance = distance, distance.options = nnet)
+                                                                  formula, final_contests, distance = distance, distance.options = nnet)
     }
     else {
-    set.seed(125)
-    balances[[paste(methods, distance, sep = "_")]]<- matching(methods, 
-    formula, final_contests, distance = distance)
+      set.seed(125)
+      balances[[paste(methods, distance, sep = "_")]]<- matching(methods, 
+                                                                 formula, final_contests, distance = distance)
     }
   }
 }
@@ -237,9 +237,9 @@ for(i in seq_along(balances)) {
   v <- sum(if_else(balances[[i]]["V.Threshold"]=="Balanced, <2", 1 , 0), 
            na.rm=TRUE)
   bal_result[[i]] <-tibble(method = paste(names(balances[i])), 
-                    bal_mean = m,
-                    bal_var = v)
-
+                           bal_mean = m,
+                           bal_var = v)
+  
 }
 bal_result <- bind_rows(bal_result)
 my_pick <- bal_result %>% filter(bal_mean==max(bal_mean)) %>%
@@ -251,9 +251,9 @@ tie_breaker <- tibble(
   model = c("optimal_glm", "optimal_gam"),
   un_balanced_mean_diff = 
     c(mean(c(abs(balances[["optimal_glm"]][7,4])-0.1, 
-           abs(balances[["optimal_glm"]][11,4])-0.1)),
-       mean(c(abs(balances[["optimal_gam"]][7,4])-0.1,
-              abs(balances[["optimal_gam"]][11,4])-0.1))))
+             abs(balances[["optimal_glm"]][11,4])-0.1)),
+      mean(c(abs(balances[["optimal_gam"]][7,4])-0.1,
+             abs(balances[["optimal_gam"]][11,4])-0.1))))
 
 
 ## ----------------------------------------------------------------------------------------------------
@@ -267,9 +267,9 @@ write_rds(optimal_glm, "data/matched_model.rds")
 
 ## ----------------------------------------------------------------------------------------------------
 test.vars <- c("population_2020", "mass_ideology_2020","pres_pctD_20",
-                    "pres_pctD_16", "pres_pctD_08",
-                    "percent_women", "percent_white", "percent_black", "percent_hispanic", 
-                    "percent_asian_american") 
+               "pres_pctD_16", "pres_pctD_08",
+               "percent_women", "percent_white", "percent_black", "percent_hispanic", 
+               "percent_asian_american") 
 qq_labels <- c("Population (2020)", "Ideology Measure (2020)", 
                "Dem. Vote 2020 (%)", 
                "Dem. Vote 2016  (%)",
@@ -332,8 +332,8 @@ final_contests %>% select(turnout, council.manager, incumbent,margin,
          "Concurrent Midterm" =  concurrent_mid) %>%
   as.data.frame() %>%
   stargazer(summary = TRUE, header = FALSE, digits = 2,
-          single.row = TRUE, column.sep.width = "0pt", font.size = "footnotesize",
-          float = FALSE,  omit.summary.stat = "N", out = "plots/summary.txt")
+            single.row = TRUE, column.sep.width = "0pt", font.size = "footnotesize",
+            float = FALSE,  omit.summary.stat = "N", out = "plots/summary.txt")
 
 
 ## ----------------------------------------------------------------------------------------------------
@@ -342,19 +342,19 @@ final_contests %>% select(turnout, council.manager, incumbent,margin,
 #| fig.width: 8
 #| label: fig-lm
 final_covs <- final_contests[, c("log.pop", 
-                       "margin", "percent_women","percent_black", 
-                       "percent_hispanic", "percent_asian_american")]
+                                 "margin", "percent_women","percent_black", 
+                                 "percent_hispanic", "percent_asian_american")]
 final_cov_lab <- c("Population (ln)", "Margin of Victory", "Women(%)", "Black (%)",
                    "Hispanic(%)", "Asian(%)")
 coef_plots <- list()
 for (i in seq_along(final_covs)) {
- coef_plots[[i]]<- ggplot(final_contests, 
-                          aes_string(names(final_covs[i]), "turnout"))+
+  coef_plots[[i]]<- ggplot(final_contests, 
+                           aes_string(names(final_covs[i]), "turnout"))+
     geom_point()+
-   theme_minimal()+ 
-   labs(x = paste(final_cov_lab[i]),  y = "Turnout(%)")+
+    theme_minimal()+ 
+    labs(x = paste(final_cov_lab[i]),  y = "Turnout(%)")+
     geom_smooth(method = "lm", se = FALSE)+
-   geom_smooth(se = FALSE)
+    geom_smooth(se = FALSE)
 }
 grid.arrange(grobs = coef_plots, ncol = 3)
 ggsave("Coef_plot.png",
@@ -366,7 +366,7 @@ ggsave("Coef_plot.png",
 #| label: tbl-bal
 #| tbl-cap: "Balance Table Results for Matching Procedure: Optimal GLM Method"
 final_balances <- bal.tab(optimal_glm, stats = c("mean.diffs", "variance.ratios"), 
-                         binary = "std", thresholds = c(m=0.1, v=2), un = TRUE)
+                          binary = "std", thresholds = c(m=0.1, v=2), un = TRUE)
 balance_table <- as_tibble(final_balances[[1]]) %>% 
   mutate(Covariates = c("Propensity Score", "Not Concurrent", 
                         "Concurrent With Midterm","Concurrent with President", 
@@ -375,11 +375,11 @@ balance_table <- as_tibble(final_balances[[1]]) %>%
                         "Incumbent Prescence", "Margin of Victory", "Women (%)",
                         "Black (%)", "Hispanic (%)", "Asian (%)")) %>%
   select(Covariates, Type, Diff.Un, V.Ratio.Un, Diff.Adj,
-       M.Threshold, V.Ratio.Adj, V.Threshold) %>% mutate(
-         Diff.Un = round(Diff.Un, 4),
-         V.Ratio.Un = round(V.Ratio.Un, 4),
-         Diff.Adj = round(Diff.Adj, 4),
-         V.Ratio.Adj = round(V.Ratio.Adj, 4))
+         M.Threshold, V.Ratio.Adj, V.Threshold) %>% mutate(
+           Diff.Un = round(Diff.Un, 4),
+           V.Ratio.Un = round(V.Ratio.Un, 4),
+           Diff.Adj = round(Diff.Adj, 4),
+           V.Ratio.Adj = round(V.Ratio.Adj, 4))
 stargazer(balance_table, summary = FALSE, header = FALSE,
           digits = 4, column.sep.width = "0pt", single.row = TRUE,
           rownames = FALSE, font.size = "footnotesize", float = FALSE, out = "plot/bal_tab.txt")
@@ -391,15 +391,15 @@ stargazer(balance_table, summary = FALSE, header = FALSE,
 #| fig.height: 5
 #| label: fig-love
 bal_names <- list("Propensity Score", "Not Concurrent", "Concurrent With Midterm",
-                        "Concurrent with President", "Has a Mayor",
-                        "Mayoral Election", "Population (ln)",
-                        "Incumbent Prescence", "Margin of Victory", "Women (%)",
-                        "Black (%)", "Hispanic (%)", "Asian (%)")
+                  "Concurrent with President", "Has a Mayor",
+                  "Mayoral Election", "Population (ln)",
+                  "Incumbent Prescence", "Margin of Victory", "Women (%)",
+                  "Black (%)", "Hispanic (%)", "Asian (%)")
 names(bal_names) <- var.names(final_balances)
 
 love <- love.plot(optimal_glm, stats = c("mean.diffs", "variance.ratios"), 
-          binary = "std", thresholds = c(m=0.1, v=2), un = TRUE,
-          var.names = bal_names, title = NULL)
+                  binary = "std", thresholds = c(m=0.1, v=2), un = TRUE,
+                  var.names = bal_names, title = NULL)
 ggsave("love_plot.png", plot = love, path = "plots")
 
 
@@ -409,9 +409,9 @@ ggsave("love_plot.png", plot = love, path = "plots")
 #| tbl-cap: "Summary Statistics of Selected Covariates in Matched Sample"
 #| label: tbl-summ
 matched_data %>% select(turnout, council.manager, incumbent,margin, 
-                          percent_women, percent_black , percent_hispanic , 
-                          percent_asian_american, log.pop, concurrent_pres,
-                          concurrent_mid,has_mayor,mayor_elec) %>%
+                        percent_women, percent_black , percent_hispanic , 
+                        percent_asian_american, log.pop, concurrent_pres,
+                        concurrent_mid,has_mayor,mayor_elec) %>%
   rename("Turnout(%)" = turnout,
          "Has a Manager" = council.manager,
          "Has a Mayor" = has_mayor, 
@@ -427,8 +427,8 @@ matched_data %>% select(turnout, council.manager, incumbent,margin,
          "Concurrent Midterm" =  concurrent_mid) %>%
   as.data.frame() %>%
   stargazer( summary = TRUE, header = FALSE, digits = 2,
-          single.row = TRUE, column.sep.width = "0pt", font.size = "footnotesize",
-          float = FALSE, omit.summary.stat = "N", out = "plots/sum_match.txt")
+             single.row = TRUE, column.sep.width = "0pt", font.size = "footnotesize",
+             float = FALSE, omit.summary.stat = "N", out = "plots/sum_match.txt")
 
 
 ## ----------------------------------------------------------------------------------------------------
@@ -442,7 +442,7 @@ lm_ref_matched <- lm(turnout ~ council.manager, data = matched_data, weights = w
 lm_full_matched <- lm(turnout ~ council.manager + concurrent+ office + 
                         has_mayor + incumbent + margin + log.pop + 
                         percent_women + percent_black + percent_hispanic +
-                percent_asian_american, data = matched_data, weights = weights)
+                        percent_asian_american, data = matched_data, weights = weights)
 
 
 
@@ -471,8 +471,8 @@ stargazer(lm_ref, lm_full, lm_ref_matched, lm_full_matched,
           star.cutoffs = c(0.05, NA, NA), notes = " *p<0.05", 
           notes.append = FALSE,
           covariate.labels = c("Manager", "Midterm Concurrency", "President Concurrency",
-          "Has a Mayor", "Mayoral Election", "Incumbent Presence", "Margin of Victory",
-          "Percent Women", "Percent Black", "Population(ln)", "Percent Hispanic", "Percent Asian"),
+                               "Has a Mayor", "Mayoral Election", "Incumbent Presence", "Margin of Victory",
+                               "Percent Women", "Percent Black", "Population(ln)", "Percent Hispanic", "Percent Asian"),
           dep.var.labels = "Voter Turnout",
           no.space = TRUE,
           single.row = TRUE,
@@ -547,17 +547,17 @@ ggsave("map.png", last_plot(), path = "plots")
 ## ----------------------------------------------------------------------------------------------------
 
 all_covs <- final_contests[, c("council.manager","turnout", "has_mayor", "mayor_elec", "incumbent", "log.pop", 
-                       "margin", "percent_men", "percent_women", "percent_white",
-                       "percent_black", "percent_hispanic", "percent_asian_american",
-                       "concurrent_pres", "concurrent_mid")]
+                               "margin", "percent_men", "percent_women", "percent_white",
+                               "percent_black", "percent_hispanic", "percent_asian_american",
+                               "concurrent_pres", "concurrent_mid")]
 names(all_covs) <-c("Has a Manager", "Turnout", "Has a Mayor", "Mayor Election", 
-                 "Incumbency", "Population(ln)", "Margin", "Men(%)", "Women(%)",
-                 "White(%)", "Black(%)", "Hispanic(%)", "Asian(%)", "Concurrent Pres.",
-                 "Concurrent Mid.")
+                    "Incumbency", "Population(ln)", "Margin", "Men(%)", "Women(%)",
+                    "White(%)", "Black(%)", "Hispanic(%)", "Asian(%)", "Concurrent Pres.",
+                    "Concurrent Mid.")
 inst_cov <- all_covs[, c("Has a Manager", "Turnout", "Has a Mayor", "Mayor Election",
                          "Incumbency", "Margin")]
 dem_covs <- all_covs[, c("Has a Manager", "Turnout", "Population(ln)", "Men(%)", "Women(%)",
-                 "White(%)", "Black(%)", "Hispanic(%)", "Asian(%)")]
+                         "White(%)", "Black(%)", "Hispanic(%)", "Asian(%)")]
 tim_covs <- all_covs[,c("Has a Manager", "Turnout", "Concurrent Pres.","Concurrent Mid.")]
 
 inst_cors<- as.data.frame((cor(inst_cov)))
@@ -604,7 +604,7 @@ stargazer(tim_cors, summary = FALSE,
 #| fig.height: 7
 #| label: fig-bal
 bals <- c("incumbent", "percent_women", "percent_black", "percent_hispanic",
-             "percent_asian_american", "log.pop", "concurrent", 
+          "percent_asian_american", "log.pop", "concurrent", 
           "has_mayor", "distance")
 bal_labs <- c("Incumbent", "Women (%)", "Black (%)", "Hispanic (%)", "Asian (%)", 
               "Population (ln)", "Election Concurrency", "Has a Mayor",
@@ -647,7 +647,7 @@ resid_plot_un <- ggplot(augment(lm_full), aes(.fitted, .resid))+
   theme_minimal()+
   ylim(c(-50,50))
 resid_plot_ma <-ggplot(augment(lm_full_matched),
-                                aes(.fitted, .resid))+
+                       aes(.fitted, .resid))+
   geom_point() + 
   geom_hline(yintercept = 0, linetype = 2, color = "blue")+
   labs(title = "Matched", x = "Fitted Values", y = "Residuals")+
@@ -658,5 +658,5 @@ grid.arrange(resid_plot_un, resid_plot_ma, ncol = 2)
 
 ggsave("residuals.png", plot = arrangeGrob(resid_plot_un,
                                            resid_plot_ma,ncol = 2), 
-                                           path = "plots")
+       path = "plots")
 
