@@ -35,3 +35,13 @@ This folder contains all plots and tables for easy viewing.
 ## NCUR Poster
 Presentation poster created for National Conference for Undergraduate Research 2025 (NCUR 2025) using `posterdown` (<https://github.com/brentthorne/posterdown>)
 
+## LICENSE and Replication
+
+All of the code here lets the results of the project be replicated, feel free to clone the repo and run it for yourself.
+Although this project is completed and has been published, if you notice any issues feel free to fork the repo and submit a pull request detailing the specifics. Also feel free to email me <noahochital@icloud.com> with any questions about the project.  
+
+The [LICENSE_code](Code License) is GPLv3. The code is not a piece of software but if it helps you with your project feel free to use it and tweak to your needs with attribution.
+The [LICENSE_paper](Paper License)is CC BY-NC-SA, meaning I must be attributed given for any usage of the ideas presented, they cannot be used commercially, and adaptations must be shared under the same terms. These terms are also dicated by the publishing journal.
+
+
+
