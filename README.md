@@ -30,7 +30,7 @@ This folder contains all the code for the project
 
 ## Plots
 
-This folder contains all plots as png and tables as text files for viewing.  
+This folder contains all plots and tables for easy viewing.  
 
 ## NCUR Poster
 Presentation poster created for National Conference for Undergraduate Research 2025 (NCUR 2025) using `posterdown` (<https://github.com/brentthorne/posterdown>)
